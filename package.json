@@ -1,0 +1,33 @@
+{
+  "name": "lct-rr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "turbo run lint",
+    "format:check": "turbo run format:check",
+    "test": "turbo run test",
+    "view-report": "turbo run view-report",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@mareuter/prettier-config": "^0.1.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.4",
+    "turbo": "^2.10.3"
+  },
+  "packageManager": "pnpm@11.10.0+sha512.0b7f8b98060031904c017e3a41eb187a16d40eeb829b95c4f8cb03681761fc4ab53dd219115b9b447f4dce1a05a214764461e7d3703392a9f32f9511ce8c86c8",
+  "engines": {
+    "node": ">=24"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{json,md}": [
+      "prettier --write ."
+    ]
+  }
+}
