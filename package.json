@@ -7,7 +7,8 @@
     "format:check": "turbo run format:check",
     "test": "turbo run test",
     "view-report": "turbo run view-report",
-    "prepare": "husky"
+    "prepare": "husky",
+    "storybook": "turbo run storybook"
   },
   "devDependencies": {
     "@mareuter/prettier-config": "^0.1.2",

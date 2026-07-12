@@ -28,6 +28,9 @@
     },
     "format:check": {
       "dependsOn": ["^format:check"]
+    },
+    "storybook": {
+      "dependsOn": ["^storybook"]
     }
   }
 }
