@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "lint": "turbo run lint",
+    "format": "turbo run format",
     "format:check": "turbo run format:check",
     "test": "turbo run test",
     "view-report": "turbo run view-report",

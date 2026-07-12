@@ -6,7 +6,7 @@ import myPrettierConfig from '@mareuter/prettier-config'
  */
 const config = {
   ...myPrettierConfig,
-  plugins: ["prettier-plugin-tailwindcss"]
+  plugins: ['prettier-plugin-tailwindcss'],
 }
 
 export default config

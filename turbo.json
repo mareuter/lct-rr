@@ -29,6 +29,9 @@
     "format:check": {
       "dependsOn": ["^format:check"]
     },
+    "format": {
+      "dependsOn": ["^format"]
+    },
     "storybook": {
       "dependsOn": ["^storybook"]
     }
