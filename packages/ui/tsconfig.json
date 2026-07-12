@@ -1,5 +1,4 @@
 {
-  "extends": "@mareuter/typescript-config/tsc/dom/app",
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
