@@ -14,9 +14,11 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest",
-    "test-storybook": "vitest --project=storybook"
+    "test-storybook": "vitest --project=storybook",
+    "test-helpers": "vitest --project=helpers"
   },
   "dependencies": {
+    "luxon": "^3.7.2",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },

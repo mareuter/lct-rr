@@ -48,6 +48,12 @@ export default defineConfig({
           },
         },
       },
+      {
+        test: {
+          name: 'helpers',
+          include: ["**/*.test.ts"]
+        },
+      },
     ],
   },
 })
