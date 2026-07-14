@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react-vite'
 import { withThemeByDataAttribute } from '@storybook/addon-themes'
+import { INITIAL_VIEWPORTS } from 'storybook/viewport'
 
 import '../lib/style.css'
 
@@ -18,6 +19,13 @@ const preview: Preview = {
       // 'off' - skip a11y checks entirely
       test: 'todo',
     },
+
+    viewport: {
+      options: INITIAL_VIEWPORTS,
+    },
+  },
+  initialGlobals: {
+    viewport: { value: 'iphone13', isRotated: false },
   },
   decorators: [
     withThemeByDataAttribute({
