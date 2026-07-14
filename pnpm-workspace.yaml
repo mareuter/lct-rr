@@ -3,3 +3,7 @@ packages:
   - "packages/*"
 allowBuilds:
   esbuild: false
+minimumReleaseAgeExclude:
+  - '@mareuter/typescript-config@0.1.2'
+overrides:
+  "@mareuter/typescript-config": "0.1.2"
