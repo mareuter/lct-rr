@@ -65,7 +65,9 @@ describe('Formatting Time Labels', () => {
   })
 
   it('Local Time Label', () => {
-    expect(formatTimeWithSeconds(testDate, timezone)).toBe('2019-06-07 23:30:00')
+    expect(formatTimeWithSeconds(testDate, timezone)).toBe(
+      '2019-06-07 23:30:00',
+    )
   })
 
   it('Local Time with IANA Timezone Label', () => {
@@ -105,7 +107,10 @@ describe('Formatting Time Labels', () => {
   it('Local Time with Minutes Only, Short Timezone Label and Split', () => {
     const dateStr = '2019-06-07'
     const timeStr = '19:30 EDT'
-    expect(formatTimeWithMinutesSplit(timeTuple, timezone)).toStrictEqual({ date: dateStr, time: timeStr })
+    expect(formatTimeWithMinutesSplit(timeTuple, timezone)).toStrictEqual({
+      date: dateStr,
+      time: timeStr,
+    })
   })
 })
 

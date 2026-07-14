@@ -29,13 +29,23 @@ const PhaseCard = ({
   }
 
   return (
-    <div className="grid grid-cols-2 rounded-md border-2 xs:max-w-md">
-      <div className="flex items-center aspect-square align-center pl-2">
-        <img src={phase_image} alt="Moon phase image" sizes="auto" width="300px" height="300px"/>
+    <div className="xs:max-w-md grid grid-cols-2 rounded-md border-2">
+      <div className="align-center flex aspect-square items-center pl-2">
+        <img
+          src={phase_image}
+          alt="Moon phase image"
+          sizes="auto"
+          width="300px"
+          height="300px"
+        />
       </div>
       <div className="grid grid-rows-2 justify-center-safe">
-        <p className="flex items-center text-2xl xs:text-4xl pt-4">{phase_date}</p>
-        <p className="flex items-center text-2xl xs:text-4xl pb-4">{phase_time}</p>
+        <p className="xs:text-4xl flex items-center pt-4 text-2xl">
+          {phase_date}
+        </p>
+        <p className="xs:text-4xl flex items-center pb-4 text-2xl">
+          {phase_time}
+        </p>
       </div>
     </div>
   )

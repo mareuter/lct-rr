@@ -51,7 +51,7 @@ export default defineConfig({
       {
         test: {
           name: 'helpers',
-          include: ["**/*.test.ts"]
+          include: ['**/*.test.ts'],
         },
       },
     ],
