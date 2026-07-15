@@ -5,6 +5,7 @@
   "scripts": {
     "check-types": "turbo run check-types",
     "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
     "format": "turbo run format",
     "format:check": "turbo run format:check",
     "test": "turbo run test",
@@ -29,8 +30,12 @@
     }
   },
   "lint-staged": {
-    "**/*.{json,md}": [
-      "prettier --write ."
+    "**/*.{json,md,css}": [
+      "turbo run format"
+    ],
+    "**/*.{ts,tsx,js,jsx}": [
+      "turbo run lint:fix",
+      "turbo run format"
     ]
   }
 }

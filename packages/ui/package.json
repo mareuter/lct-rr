@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint --max-warnings 0 .",
+    "lint:fix": "eslint --fix .",
     "check-types": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -56,11 +57,11 @@
   },
   "lint-staged": {
     "**/*.{json,md,css}": [
-      "prettier --write ."
+      "pnpm format"
     ],
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix .",
-      "prettier --write ."
+      "pnpm lint:fix",
+      "pnpm format"
     ]
   }
 }
