@@ -13,26 +13,26 @@ const moonPhaseIcons: PhaseIcon = {
 }
 
 const PhaseCard = ({
-  phase_name,
-  phase_date,
-  phase_time,
+  phaseName,
+  phaseDate,
+  phaseTime,
 }: {
-  phase_name: string | undefined
-  phase_date: string
-  phase_time: string
+  phaseName: string | undefined
+  phaseDate: string
+  phaseTime: string
 }) => {
-  let phase_image
-  if (phase_name === undefined) {
-    phase_image = phase_placeholder
+  let phaseImage
+  if (phaseName === undefined) {
+    phaseImage = phase_placeholder
   } else {
-    phase_image = moonPhaseIcons[phase_name as keyof PhaseIcon]
+    phaseImage = moonPhaseIcons[phaseName as keyof PhaseIcon]
   }
 
   return (
     <div className="xs:max-w-md grid grid-cols-2 rounded-md border-2">
       <div className="align-center flex aspect-square items-center pl-2">
         <img
-          src={phase_image}
+          src={phaseImage}
           alt="Moon phase image"
           sizes="auto"
           width="300px"
@@ -41,10 +41,10 @@ const PhaseCard = ({
       </div>
       <div className="grid grid-rows-2 justify-center-safe">
         <p className="xs:text-4xl flex items-center pt-4 text-2xl">
-          {phase_date}
+          {phaseDate}
         </p>
         <p className="xs:text-4xl flex items-center pb-4 text-2xl">
-          {phase_time}
+          {phaseTime}
         </p>
       </div>
     </div>

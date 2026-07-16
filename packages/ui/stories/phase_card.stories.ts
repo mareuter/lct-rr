@@ -11,16 +11,16 @@ type Story = StoryObj<typeof PhaseCard>
 
 export const Undefined: Story = {
   args: {
-    phase_name: undefined,
-    phase_date: '0000-00-00',
-    phase_time: '00:00 UTC',
+    phaseName: undefined,
+    phaseDate: '0000-00-00',
+    phaseTime: '00:00 UTC',
   },
 }
 
 export const FirstQuarter: Story = {
   args: {
-    phase_name: 'first_quarter',
-    phase_date: '2024-10-20',
-    phase_time: '23:43 UTC',
+    phaseName: 'first_quarter',
+    phaseDate: '2024-10-20',
+    phaseTime: '23:43 UTC',
   },
 }
