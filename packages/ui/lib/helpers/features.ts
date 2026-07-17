@@ -1,6 +1,10 @@
-import { FeatureData, FeatureDataInfo, LunarFeature } from '../definitions'
+import {
+  type FeatureData,
+  FeatureDataInfo,
+  type LunarFeature,
+} from '../definitions'
 
-export const createFeatureArray = (features: FeatureData[]) => {
+export const createFeatureArray = (features: FeatureData[]): LunarFeature[] => {
   const featureArray: LunarFeature[] = []
   let key = 0
   for (const feature of features) {
