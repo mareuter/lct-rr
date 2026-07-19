@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import NextFourPhases from '../lib/components/next_four_phases'
+import moonInfo from '../lib/data/query/moon_info.json' with { type: 'json' }
 
 const meta: Meta<typeof NextFourPhases> = {
   component: NextFourPhases,
@@ -18,18 +19,7 @@ export const Undefined: Story = {
 
 export const Filled: Story = {
   args: {
-    phaseList: {
-      '0': { phase: 'full_moon', datetime: [2013, 10, 18, 23, 37, 39.633078] },
-      '1': {
-        phase: 'last_quarter',
-        datetime: [2013, 10, 26, 23, 40, 28.739246],
-      },
-      '2': { phase: 'new_moon', datetime: [2013, 11, 3, 12, 49, 57.852996] },
-      '3': {
-        phase: 'first_quarter',
-        datetime: [2013, 11, 10, 5, 57, 10.402442],
-      },
-    },
+    phaseList: moonInfo.next_four_phases,
     timezone: 'America/New_York',
   },
 }
