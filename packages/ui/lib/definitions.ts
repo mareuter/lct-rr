@@ -43,3 +43,7 @@ export interface LunarFeature {
   quadCode: string
   quadName: string
 }
+
+export interface FeatureDataSet {
+  [index: string]: FeatureData
+}

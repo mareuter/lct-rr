@@ -1,13 +1,16 @@
 import {
-  type FeatureData,
+  type FeatureDataSet,
   FeatureDataInfo,
   type LunarFeature,
 } from '../definitions'
 
-export const createFeatureArray = (features: FeatureData[]): LunarFeature[] => {
+export const createFeatureArray = (
+  features: FeatureDataSet,
+): LunarFeature[] => {
   const featureArray: LunarFeature[] = []
   let key = 0
-  for (const feature of features) {
+  for (const index in features) {
+    const feature = features[index]!
     featureArray.push({
       key: key,
       name: feature[FeatureDataInfo.NAME] as string,
