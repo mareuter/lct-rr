@@ -1,6 +1,8 @@
+import Feature from './components/feature'
 import NextFourPhases from './components/next_four_phases'
+import NoFeaturesVisible from './components/no_features_visible'
 import PhaseCard from './components/phase_card'
 
 import './style.css'
 
-export { NextFourPhases, PhaseCard }
+export { Feature, NextFourPhases, NoFeaturesVisible, PhaseCard }
