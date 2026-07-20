@@ -26,3 +26,13 @@ export const SkeletonNextFourPhases = () => {
     </div>
   )
 }
+
+export const SkeletonInfoBox = () => {
+  return (
+    <div className="xs:max-w-md rounded-md border-2 shadow-md shadow-gray-600 dark:shadow-gray-400">
+      <div className="xs:h-5 my-1 ml-2 h-3 w-40 animate-pulse bg-gray-400 dark:bg-gray-600" />
+      <hr className="mx-1 text-gray-700 dark:text-gray-300" />
+      <div className="xs:h-5 m-1 h-3 animate-pulse bg-gray-400 dark:bg-gray-600" />
+    </div>
+  )
+}
