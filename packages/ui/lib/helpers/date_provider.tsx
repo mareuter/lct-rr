@@ -3,7 +3,7 @@ import DateContext, { type DateContextType } from './date_context'
 
 const DateProvider = ({ children }: { children: ReactNode }) => {
   const [date, setDate] = useState(new Date())
-  const context: DateContextType = { setDate, date }
+  const context: DateContextType = { date, setDate }
 
   return <DateContext value={context}>{children}</DateContext>
 }

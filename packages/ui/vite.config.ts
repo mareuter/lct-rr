@@ -54,6 +54,22 @@ export default defineConfig({
           include: ['**/*.test.ts'],
         },
       },
+      {
+        test: {
+          name: 'helpers-browser',
+          include: ['**/*.test.tsx'],
+          browser: {
+            enabled: true,
+            headless: true,
+            provider: playwright({}),
+            instances: [
+              {
+                browser: 'chromium',
+              },
+            ],
+          },
+        },
+      },
     ],
   },
 })

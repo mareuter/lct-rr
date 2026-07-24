@@ -16,7 +16,8 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "test-storybook": "vitest --project=storybook",
-    "test-helpers": "vitest --project=helpers"
+    "test-helpers": "vitest --project=helpers",
+    "test-helpers:browser": "vitest --project=helpers-browser"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -55,7 +56,8 @@
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.62.0",
     "vite": "^8.1.1",
-    "vitest": "^4.1.9"
+    "vitest": "^4.1.9",
+    "vitest-browser-react": "^2.2.0"
   },
   "lint-staged": {
     "**/*.{json,md,css}": [
