@@ -4,6 +4,7 @@ export type Location = {
   latitude: number
   longitude: number
   good: boolean
+  timezone: string
 }
 
 export type GeoLocationContextType = {

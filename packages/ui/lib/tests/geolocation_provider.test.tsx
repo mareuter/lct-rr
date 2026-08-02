@@ -14,8 +14,19 @@ const AllTheProviders = ({ children }: { children: ReactNode }) => {
 describe('Test GeoLocation Context', () => {
   beforeEach(() => {
     globalThis.alert = vi.fn()
+    vi.spyOn(globalThis.Intl, 'DateTimeFormat').mockImplementation(() => ({
+      resolvedOptions: () => ({
+        timeZone: 'America/New_York',
+        calendar: 'gregory',
+        locale: 'en-US',
+        numberingSystem: 'latin',
+      }),
+      format: () => '1/1/2026',
+      formatRange: () => '1/1/2026 - 1/1/2027',
+      formatRangeToParts: () => [],
+      formatToParts: () => [],
+    }))
   })
-
   afterEach(() => {
     vi.restoreAllMocks()
   })
@@ -36,11 +47,13 @@ describe('Test GeoLocation Context', () => {
     )
 
     const latLocator = screen.getByTitle('lat')
-    await expect.poll(() => latLocator).toHaveTextContent('0')
+    await expect.poll(() => latLocator).toHaveTextContent('27.2168466449')
     const lonLocator = screen.getByTitle('lon')
-    await expect.poll(() => lonLocator).toHaveTextContent('0')
+    await expect.poll(() => lonLocator).toHaveTextContent('-78.5109071898')
     const goodLocator = screen.getByTitle('good')
     await expect.poll(() => goodLocator).toHaveTextContent('false')
+    const tzLocator = screen.getByTitle('timezone')
+    await expect.poll(() => tzLocator).toHaveTextContent('America/New_York')
   })
 
   it('Render good location', async () => {
@@ -57,5 +70,7 @@ describe('Test GeoLocation Context', () => {
     await expect.poll(() => lonLocator).toHaveTextContent('-84.32')
     const goodLocator = screen.getByTitle('good')
     await expect.poll(() => goodLocator).toHaveTextContent('true')
+    const tzLocator = screen.getByTitle('timezone')
+    await expect.poll(() => tzLocator).toHaveTextContent('America/New_York')
   })
 })

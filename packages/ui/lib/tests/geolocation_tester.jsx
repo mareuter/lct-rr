@@ -9,6 +9,7 @@ const GeoLocationTester = () => {
       <p title="lat">{location.latitude.toString()}</p>
       <p title="lon">{location.longitude.toString()}</p>
       <p title="good">{location.good.toString()}</p>
+      <p title="timezone">{location.timezone}</p>
     </div>
   )
 }

@@ -1,24 +1,28 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useState, useRef, type ReactNode } from 'react'
 
 import GeoLocationContext, {
   type GeoLocationContextType,
   type Location,
 } from './geolocation_context'
 
+import { getAverageTimezoneCoordinates } from './average_timezone_coordinates'
+
 const GeoLocationProvider = ({ children }: { children: ReactNode }) => {
+  const timezone = useRef(Intl.DateTimeFormat().resolvedOptions().timeZone)
   const [location, setLocation] = useState({
     latitude: 0,
     longitude: 0,
     good: false,
+    timezone: 'UTC',
   } as Location)
 
   useEffect(() => {
     function fetchPosition(pos: GeolocationPosition) {
-      console.log('D')
       setLocation({
         latitude: pos.coords.latitude,
         longitude: pos.coords.longitude,
         good: true,
+        timezone: timezone.current,
       })
     }
 
@@ -43,10 +47,12 @@ const GeoLocationProvider = ({ children }: { children: ReactNode }) => {
       message += ' Inaccurate information shown in italics!'
       console.log('CCC')
       alert(message)
+      const avgCoordinates = getAverageTimezoneCoordinates(timezone.current)
       setLocation({
-        latitude: 0,
-        longitude: 0,
+        latitude: avgCoordinates![0]!,
+        longitude: avgCoordinates![1]!,
         good: false,
+        timezone: timezone.current,
       })
     }
 

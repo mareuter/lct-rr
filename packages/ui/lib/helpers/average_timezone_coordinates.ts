@@ -416,5 +416,10 @@ const AverageTimezoneCoordinates: { [index: string]: Array<number> } = {
 }
 
 export const getAverageTimezoneCoordinates = (timezone: string) => {
-  return AverageTimezoneCoordinates[timezone]
+  const coords = AverageTimezoneCoordinates[timezone]
+  if (coords === undefined) {
+    return [0, 0]
+  } else {
+    return coords
+  }
 }
