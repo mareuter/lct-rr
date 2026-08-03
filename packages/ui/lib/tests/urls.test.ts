@@ -2,6 +2,7 @@ import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
 import type { DateContextType } from '../helpers/date_context'
 import type { GeoLocationContextType } from '../helpers/geolocation_context'
+import { dateContext, geoLocationContext } from './contexts.mock'
 import { createUrl } from '../helpers/urls'
 
 let date: DateContextType
@@ -9,19 +10,8 @@ let geoLoc: GeoLocationContextType
 
 describe('Test URL combinations', () => {
   beforeAll(() => {
-    date = {
-      date: new Date(Date.UTC(2013, 9, 18, 22, 0, 0)),
-      setDate: vi.fn(),
-    }
-    geoLoc = {
-      location: {
-        latitude: 35.96,
-        longitude: -84.32,
-        good: true,
-        timezone: 'America/New_York',
-      },
-      setLocation: vi.fn(),
-    }
+    date = dateContext
+    geoLoc = geoLocationContext
   })
   afterAll(() => {
     vi.resetAllMocks()
