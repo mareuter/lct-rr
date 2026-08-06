@@ -68,14 +68,14 @@ export const formatTimeWithMinutes = (
   timezone: string,
   useNbsp: boolean = false,
 ) => {
-  const seconds = Math.trunc(timeTuple[5])
-  const milliseconds = Math.round((timeTuple[5] - seconds) * 1000)
+  const seconds = Math.trunc(timeTuple[5]!)
+  const milliseconds = Math.round((timeTuple[5]! - seconds) * 1000)
   const local = DateTime.utc(
-    timeTuple[0],
-    timeTuple[1],
-    timeTuple[2],
-    timeTuple[3],
-    timeTuple[4],
+    timeTuple[0]!,
+    timeTuple[1]!,
+    timeTuple[2]!,
+    timeTuple[3]!,
+    timeTuple[4]!,
     seconds,
     milliseconds,
   )
@@ -93,14 +93,14 @@ export const formatTimeWithMinutesSplit = (
   timeTuple: Array<number>,
   timezone: string,
 ) => {
-  const seconds = Math.trunc(timeTuple[5])
-  const milliseconds = Math.round((timeTuple[5] - seconds) * 1000)
+  const seconds = Math.trunc(timeTuple[5]!)
+  const milliseconds = Math.round((timeTuple[5]! - seconds) * 1000)
   const local = DateTime.utc(
-    timeTuple[0],
-    timeTuple[1],
-    timeTuple[2],
-    timeTuple[3],
-    timeTuple[4],
+    timeTuple[0]!,
+    timeTuple[1]!,
+    timeTuple[2]!,
+    timeTuple[3]!,
+    timeTuple[4]!,
     seconds,
     milliseconds,
   )
@@ -113,14 +113,14 @@ export const formatTimeWithMinutesSplit = (
 }
 
 export const formatTimeOnly = (timeTuple: Array<number>) => {
-  const seconds = Math.trunc(timeTuple[5])
-  const milliseconds = Math.round((timeTuple[5] - seconds) * 1000)
+  const seconds = Math.trunc(timeTuple[5]!)
+  const milliseconds = Math.round((timeTuple[5]! - seconds) * 1000)
   const local = DateTime.local(
-    timeTuple[0],
-    timeTuple[1],
-    timeTuple[2],
-    timeTuple[3],
-    timeTuple[4],
+    timeTuple[0]!,
+    timeTuple[1]!,
+    timeTuple[2]!,
+    timeTuple[3]!,
+    timeTuple[4]!,
     seconds,
     milliseconds,
   )
