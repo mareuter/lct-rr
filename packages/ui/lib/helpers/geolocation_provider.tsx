@@ -1,20 +1,21 @@
-import { useEffect, useState, useRef, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 
 import GeoLocationContext, {
   type GeoLocationContextType,
-  type Location,
+  type LocationWithTz,
 } from './geolocation_context'
 
 import { getAverageTimezoneCoordinates } from './average_timezone_coordinates'
 
 const GeoLocationProvider = ({ children }: { children: ReactNode }) => {
-  const timezone = useRef(Intl.DateTimeFormat().resolvedOptions().timeZone)
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+  const avgCoordinates = getAverageTimezoneCoordinates(timezone)
   const [location, setLocation] = useState({
-    latitude: 0,
-    longitude: 0,
+    latitude: avgCoordinates![0]!,
+    longitude: avgCoordinates![1]!,
     good: false,
-    timezone: 'UTC',
-  } as Location)
+    timezone: timezone,
+  } as LocationWithTz)
 
   useEffect(() => {
     function fetchPosition(pos: GeolocationPosition) {
@@ -22,12 +23,13 @@ const GeoLocationProvider = ({ children }: { children: ReactNode }) => {
         latitude: pos.coords.latitude,
         longitude: pos.coords.longitude,
         good: true,
-        timezone: timezone.current,
+        timezone: timezone,
       })
     }
 
     function showError(error: GeolocationPositionError) {
       let message
+      console.log('CCCC')
       switch (error.code) {
         case GeolocationPositionError.PERMISSION_DENIED:
           console.log('CCCCC')
@@ -47,17 +49,17 @@ const GeoLocationProvider = ({ children }: { children: ReactNode }) => {
       message += ' Inaccurate information shown in italics!'
       console.log('CCC')
       alert(message)
-      const avgCoordinates = getAverageTimezoneCoordinates(timezone.current)
+      const avgCoordinates = getAverageTimezoneCoordinates(timezone)
       setLocation({
         latitude: avgCoordinates![0]!,
         longitude: avgCoordinates![1]!,
         good: false,
-        timezone: timezone.current,
+        timezone: timezone,
       })
     }
 
     navigator.geolocation.getCurrentPosition(fetchPosition, showError)
-  }, [])
+  }, [timezone])
 
   const context: GeoLocationContextType = { location, setLocation }
 

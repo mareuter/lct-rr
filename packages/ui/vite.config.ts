@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 /// <reference types="vitest/config" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -21,6 +22,15 @@ export default defineConfig({
       name: 'lct-ui',
       fileName: (format) => `index.${format}.js`,
     },
+    rolldownOptions: {
+      external: [/^react(\/.*)?$/, /^react-dom(\/.*)?$/],
+      output: {
+        globals: {
+          react: 'React',
+        },
+      },
+    },
+    emptyOutDir: true,
   },
   plugins: [react(), tailwindcss()],
   test: {

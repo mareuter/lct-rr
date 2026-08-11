@@ -1,22 +1,21 @@
-import type { DateContextType } from './date_context'
-import type { GeoLocationContextType } from './geolocation_context'
+import type { LocationWithTz } from './geolocation_context'
 
 const WEB_API = 'https://lct-web.onrender.com'
 
 export const createUrl = (
   api: string,
-  dateCtx: DateContextType,
-  geoLocCtx: GeoLocationContextType,
+  date: Date,
+  location: LocationWithTz,
 ): string => {
-  const timestamp = dateCtx.date.getTime() / 1000.0
+  const timestamp = date.getTime() / 1000.0
   const params = new URLSearchParams({
     date: timestamp.toString(),
-    lat: geoLocCtx.location.latitude.toString(),
-    lon: geoLocCtx.location.longitude.toString(),
+    lat: location.latitude.toString(),
+    lon: location.longitude.toString(),
   })
 
   if (api == 'moon_info') {
-    params.append('tz', geoLocCtx.location.timezone)
+    params.append('tz', location.timezone)
   }
 
   const url = new URL(api, WEB_API)

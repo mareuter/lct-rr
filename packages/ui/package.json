@@ -1,11 +1,25 @@
 {
   "name": "@repo/ui",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "type": "module",
+  "main": "./dist/index.umd.js",
+  "types": "./dist/ui.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/ui.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.ums.js"
+    },
+    "./style.css": "./dist/ui.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "api-extractor": "api-extractor run --local --verbose",
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build && tsc --project tsconfig.build.json && pnpm run api-extractor",
     "lint": "eslint --max-warnings 0 .",
     "lint:fix": "eslint --fix .",
     "check-types": "tsc --noEmit",
@@ -31,6 +45,7 @@
     "@mareuter/eslint-config": "^0.1.2",
     "@mareuter/prettier-config": "^0.1.2",
     "@mareuter/typescript-config": "^0.1.1",
+    "@microsoft/api-extractor": "^7.58.12",
     "@storybook/addon-a11y": "^10.4.6",
     "@storybook/addon-docs": "^10.4.6",
     "@storybook/addon-themes": "^10.4.6",

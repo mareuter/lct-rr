@@ -31,7 +31,9 @@ describe('Test data fetching', () => {
       json: async () => moonInfo,
     }
     globalThis.fetch = vi.fn().mockResolvedValue(mockResponse)
-    expect(await getData('moon_info', date, geoLoc)).toMatchObject(moonInfo)
+    expect(
+      await getData('moon_info', date.date, geoLoc.location),
+    ).toMatchObject(moonInfo)
   })
 
   it('Lunar Club', async () => {
@@ -40,9 +42,9 @@ describe('Test data fetching', () => {
       json: async () => lunarClubInfo,
     }
     globalThis.fetch = vi.fn().mockResolvedValue(mockResponse)
-    expect(await getData('moon_info', date, geoLoc)).toMatchObject(
-      lunarClubInfo,
-    )
+    expect(
+      await getData('moon_info', date.date, geoLoc.location),
+    ).toMatchObject(lunarClubInfo)
   })
 
   it('Lunar II Club ', async () => {
@@ -51,6 +53,8 @@ describe('Test data fetching', () => {
       json: async () => lunarTwoInfo,
     }
     globalThis.fetch = vi.fn().mockResolvedValue(mockResponse)
-    expect(await getData('moon_info', date, geoLoc)).toMatchObject(lunarTwoInfo)
+    expect(
+      await getData('moon_info', date.date, geoLoc.location),
+    ).toMatchObject(lunarTwoInfo)
   })
 })

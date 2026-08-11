@@ -1,17 +1,16 @@
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
-import type { DateContextType } from '../helpers/date_context'
-import type { GeoLocationContextType } from '../helpers/geolocation_context'
+import type { Location } from '../helpers/geolocation_context'
 import { dateContext, geoLocationContext } from './contexts.mock'
 import { createUrl } from '../helpers/urls'
 
-let date: DateContextType
-let geoLoc: GeoLocationContextType
+let date: Date
+let geoLoc: Location
 
 describe('Test URL combinations', () => {
   beforeAll(() => {
-    date = dateContext
-    geoLoc = geoLocationContext
+    date = dateContext.date
+    geoLoc = geoLocationContext.location
   })
   afterAll(() => {
     vi.resetAllMocks()

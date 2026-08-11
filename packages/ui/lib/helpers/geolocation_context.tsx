@@ -1,6 +1,6 @@
 import { createContext, type Dispatch, type SetStateAction } from 'react'
 
-export type Location = {
+export type LocationWithTz = {
   latitude: number
   longitude: number
   good: boolean
@@ -8,8 +8,8 @@ export type Location = {
 }
 
 export type GeoLocationContextType = {
-  location: Location
-  setLocation: Dispatch<SetStateAction<Location>>
+  location: LocationWithTz
+  setLocation: Dispatch<SetStateAction<LocationWithTz>>
 }
 
 const GeoLocationContext = createContext<GeoLocationContextType>(
