@@ -9,11 +9,7 @@ import NextFourPhases from './components/next_four_phases'
 import NoFeaturesVisible from './components/no_features_visible'
 import Phase2D from './components/phase2d'
 import PhaseCard from './components/phase_card'
-import {
-  SkeletonDashboard,
-  SkeletonInfoBox,
-  SkeletonNextFourPhases,
-} from './components/skeletons'
+import { SkeletonDashboard } from './components/skeletons'
 
 // Helpers
 import DateContext, { type DateContextType } from './helpers/date_context'
@@ -41,6 +37,4 @@ export {
   Phase2D,
   PhaseCard,
   SkeletonDashboard,
-  SkeletonInfoBox,
-  SkeletonNextFourPhases,
 }
