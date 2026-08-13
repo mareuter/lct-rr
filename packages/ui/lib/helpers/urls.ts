@@ -1,4 +1,4 @@
-import type { LocationWithTz } from './geolocation_context'
+import type { LocationWithTz } from './geolocation-context'
 
 const WEB_API = 'https://lct-web.onrender.com'
 

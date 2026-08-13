@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import NextFourPhases from '../lib/components/next_four_phases'
-import moonInfo from '../lib/data/query/moon_info.json' with { type: 'json' }
+import NextFourPhases from '../lib/components/next-four-phases'
+import moonInfo from '../lib/data/query/moon-info.json' with { type: 'json' }
 
 const meta: Meta<typeof NextFourPhases> = {
   component: NextFourPhases,

@@ -1,5 +1,5 @@
 import { type FormattedPhase, type PhaseList } from '../definitions'
-import PhaseCard from './phase_card'
+import PhaseCard from './phase-card'
 import { formatTimeWithMinutesSplit } from '../helpers/formatters'
 
 const NextFourPhases = ({

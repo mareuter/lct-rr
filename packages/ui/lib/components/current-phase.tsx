@@ -1,4 +1,4 @@
-import InfoBox from './info_box'
+import InfoBox from './info-box'
 import Phase2D from './phase2d'
 
 const CurrentPhase = ({

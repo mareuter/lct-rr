@@ -1,6 +1,6 @@
 import { it, describe, expect } from 'vitest'
 
-import { getAverageTimezoneCoordinates } from '../helpers/average_timezone_coordinates'
+import { getAverageTimezoneCoordinates } from '../helpers/average-timezone-coordinates'
 
 describe('Retreiving Lat/Long by Timezone Name', () => {
   it('String Access', () => {

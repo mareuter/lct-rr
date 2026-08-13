@@ -1,4 +1,4 @@
-import type { LocationWithTz } from './geolocation_context'
+import type { LocationWithTz } from './geolocation-context'
 import { createUrl } from './urls'
 
 export const getData = async (

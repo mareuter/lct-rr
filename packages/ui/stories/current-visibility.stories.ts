@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import CurrentVisibility from '../lib/components/current_visibility'
-import moonInfo from '../lib/data/query/moon_info.json' with { type: 'json' }
+import CurrentVisibility from '../lib/components/current-visibility'
+import moonInfo from '../lib/data/query/moon-info.json' with { type: 'json' }
 
 const meta: Meta<typeof CurrentVisibility> = {
   component: CurrentVisibility,

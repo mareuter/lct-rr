@@ -3,9 +3,9 @@ import { useEffect, useState, type ReactNode } from 'react'
 import GeoLocationContext, {
   type GeoLocationContextType,
   type LocationWithTz,
-} from './geolocation_context'
+} from './geolocation-context'
 
-import { getAverageTimezoneCoordinates } from './average_timezone_coordinates'
+import { getAverageTimezoneCoordinates } from './average-timezone-coordinates'
 
 const GeoLocationProvider = ({ children }: { children: ReactNode }) => {
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone

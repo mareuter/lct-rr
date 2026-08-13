@@ -1,6 +1,6 @@
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
-import type { Location } from '../helpers/geolocation_context'
+import type { Location } from '../helpers/geolocation-context'
 import { dateContext, geoLocationContext } from './contexts.mock'
 import { createUrl } from '../helpers/urls'
 

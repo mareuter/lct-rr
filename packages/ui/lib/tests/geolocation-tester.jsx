@@ -1,5 +1,5 @@
 import { use } from 'react'
-import GeoLocationContext from '../helpers/geolocation_context'
+import GeoLocationContext from '../helpers/geolocation-context'
 
 const GeoLocationTester = () => {
   const { location, setLocation } = use(GeoLocationContext)

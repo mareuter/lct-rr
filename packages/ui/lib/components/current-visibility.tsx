@@ -1,5 +1,5 @@
 import { direction } from '../helpers/visibility'
-import InfoBox from './info_box'
+import InfoBox from './info-box'
 
 const CurrentVisibility = ({
   altitude,

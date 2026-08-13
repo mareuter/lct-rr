@@ -1,5 +1,5 @@
 import { use } from 'react'
-import DateContext from '../helpers/date_context'
+import DateContext from '../helpers/date-context'
 
 const DateTester = () => {
   const { date, setDate } = use(DateContext)

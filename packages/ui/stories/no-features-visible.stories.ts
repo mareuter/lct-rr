@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import NoFeaturesVisible from '../lib/components/no_features_visible'
+import NoFeaturesVisible from '../lib/components/no-features-visible'
 
 const meta: Meta<typeof NoFeaturesVisible> = {
   component: NoFeaturesVisible,

@@ -1,7 +1,7 @@
 import { it, describe, expect } from 'vitest'
 
 import { createFeatureArray } from '../helpers/features'
-import lunarInfo from '../data/query/lunar_club.json' with { type: 'json' }
+import lunarInfo from '../data/query/lunar-club.json' with { type: 'json' }
 
 const FEATURE_LIST = lunarInfo.naked_eye_features
 

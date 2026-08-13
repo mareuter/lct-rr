@@ -4,7 +4,7 @@ import { type ReactNode } from 'react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { render } from 'vitest-browser-react'
 
-import GeoLocationProvider from '../helpers/geolocation_provider'
+import GeoLocationProvider from '../helpers/geolocation-provider'
 import GeoLocationTester from './geolocation_tester'
 
 const AllTheProviders = ({ children }: { children: ReactNode }) => {
