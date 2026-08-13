@@ -34,8 +34,8 @@ const NextFourPhases = ({
   }
 
   return (
-    <div className="rounded-md border-2 shadow-md shadow-gray-600 dark:shadow-gray-400">
-      <h1 className="xs:text-2xl text-l pl-2">Next Four Phases</h1>
+    <div className="xs:max-w-md rounded-md border-2 shadow-md shadow-gray-600 dark:shadow-gray-400">
+      <h1 className="xs:text-xl text-l pl-2">Next Four Phases</h1>
       <div>
         {nextFourPhases.map((phase, index) => (
           <div key={index} className="px-2 pb-2">
