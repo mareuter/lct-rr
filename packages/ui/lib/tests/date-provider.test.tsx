@@ -2,7 +2,7 @@ import { type ReactNode } from 'react'
 import { describe, expect, it } from 'vitest'
 import { render } from 'vitest-browser-react'
 import DateProvider from '../helpers/date-provider'
-import DateTester from './date_tester'
+import DateTester from './date-tester'
 
 const AllTheProviders = ({ children }: { children: ReactNode }) => {
   return <DateProvider>{children}</DateProvider>
