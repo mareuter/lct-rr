@@ -1,6 +1,7 @@
 import './style.css'
 
 // Components
+import AboutInfo from './components/about-info'
 import CurrentPhase from './components/current_phase'
 import CurrentVisibility from './components/current_visibility'
 import Feature from './components/feature'
@@ -23,6 +24,7 @@ import { createUrl } from './helpers/urls'
 
 export type { DateContextType, LocationWithTz, GeoLocationContextType }
 export {
+  AboutInfo,
   DateContext,
   DateProvider,
   GeoLocationContext,
