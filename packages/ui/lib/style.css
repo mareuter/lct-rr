@@ -12,6 +12,20 @@
   --breakpoint-xs: 30rem;
 }
 
+/* This doesn't work for some reason.
+.root {
+  color: var(--color-foreground-light);
+  background-color: var(--color-background-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  .root {
+    color: var(--color-foreground-dark);
+    background-color: var(--color-background-dark);
+  }
+}
+*/
+
 :root[data-theme='light'] {
   color: var(--color-foreground-light);
   background-color: var(--color-background-light);
