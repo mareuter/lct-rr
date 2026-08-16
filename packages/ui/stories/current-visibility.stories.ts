@@ -14,5 +14,30 @@ export const Default: Story = {
   args: {
     altitude: moonInfo.altitude,
     azimuth: moonInfo.azimuth,
+    coordsGood: true,
+  },
+}
+
+export const Up: Story = {
+  args: {
+    altitude: 45.0,
+    azimuth: 225.0,
+    coordsGood: true,
+  },
+}
+
+export const BadCoords: Story = {
+  args: {
+    altitude: moonInfo.altitude,
+    azimuth: moonInfo.azimuth,
+    coordsGood: false,
+  },
+}
+
+export const UpBadCoords: Story = {
+  args: {
+    altitude: 45.0,
+    azimuth: 225.0,
+    coordsGood: false,
   },
 }

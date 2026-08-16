@@ -4,9 +4,11 @@ import InfoBox from './info-box'
 const CurrentVisibility = ({
   altitude,
   azimuth,
+  coordsGood,
 }: {
   altitude: number
   azimuth: number
+  coordsGood: boolean
 }) => {
   let upOrDown: string
   if (altitude > 0.0) {
@@ -22,13 +24,16 @@ const CurrentVisibility = ({
     skyDirection = '---'
   }
 
+  let styling = 'text-l xs:text-xl xs:pr-4 pr-2 font-bold'
+  if (!coordsGood) {
+    styling += ' italic'
+  }
+
   return (
     <InfoBox title="Current Visibility">
       <div className="flex flex-row flex-nowrap items-center justify-between">
-        <p className="text-l xs:text-xl xs:pl-4 pl-2 font-bold">{upOrDown}</p>
-        <p className="text-l xs:text-xl xs:pr-4 pr-2 font-bold">
-          {skyDirection}
-        </p>
+        <p className={(styling += 'pl-1')}>{upOrDown}</p>
+        <p className={styling}>{skyDirection}</p>
       </div>
     </InfoBox>
   )
