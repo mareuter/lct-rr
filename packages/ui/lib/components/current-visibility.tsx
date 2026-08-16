@@ -32,7 +32,7 @@ const CurrentVisibility = ({
   return (
     <InfoBox title="Current Visibility">
       <div className="flex flex-row flex-nowrap items-center justify-between">
-        <p className={(styling += 'pl-1')}>{upOrDown}</p>
+        <p className={styling + ' pl-1'}>{upOrDown}</p>
         <p className={styling}>{skyDirection}</p>
       </div>
     </InfoBox>
