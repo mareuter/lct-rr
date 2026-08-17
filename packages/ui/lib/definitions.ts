@@ -47,3 +47,23 @@ export interface LunarFeature {
 export interface FeatureDataSet {
   [index: string]: FeatureData
 }
+
+export interface MoonInfoJson {
+  age: number
+  colong: number
+  fractional_phase: number
+  libration_lon: number
+  libration_lat: number
+  libration_phase_angle: number
+  altitude: number
+  azimuth: number
+  ra: number
+  dec: number
+  magnitude: number
+  earth_distance: number
+  subsolar_lat: number
+  angular_size: number
+  elongation: number
+  phase: string
+  next_four_phases: PhaseList
+}

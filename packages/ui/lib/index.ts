@@ -22,7 +22,16 @@ import DateProvider from './helpers/date-provider'
 import GeoLocationProvider from './helpers/geolocation-provider'
 import { createUrl } from './helpers/urls'
 
-export type { DateContextType, LocationWithTz, GeoLocationContextType }
+// Types
+import type { MoonInfoJson, PhaseList } from './definitions'
+
+export type {
+  DateContextType,
+  LocationWithTz,
+  GeoLocationContextType,
+  MoonInfoJson,
+  PhaseList,
+}
 export {
   DateContext,
   DateProvider,
