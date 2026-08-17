@@ -6,7 +6,7 @@ import {
 } from 'react-router'
 
 import type { Route } from './+types/root'
-import { links } from './helpers/head'
+import { links } from './helpers/link-info'
 import './index.css'
 
 import { DateProvider, GeoLocationProvider } from '@repo/ui'
@@ -22,8 +22,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           name="description"
           content="Welcome to the Lunar Club Tools App!"
         />
-        {links().map((linkInfo) => (
-          <link {...linkInfo} />
+        {links().map((linkInfo, index) => (
+          <link key={index} {...linkInfo} />
         ))}
       </head>
       <body>
