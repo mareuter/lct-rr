@@ -1,4 +1,4 @@
-import React, { Suspense, use, useLayoutEffect, useState } from 'react'
+import React, { Suspense, use, useEffect, useState } from 'react'
 
 import {
   DateContext,
@@ -65,7 +65,7 @@ const Home = () => {
   )
   const [dashboardInfo, setDashboardInfo] = useState<Promise<MoonInfoJson>>()
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     console.log('Fetching data')
     const fetchData = async () => {
       console.log('QQQ')
