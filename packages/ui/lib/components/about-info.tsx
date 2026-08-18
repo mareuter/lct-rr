@@ -13,6 +13,13 @@ const AboutInfo = ({ version }: { version: string }) => {
         The pictures of the moon used in this application are derived from a
         Lunar Reconnaissance Orbiter (NASA/GSFC/ASU) image.
       </p>
+      <h3 className="py-1 text-lg">Notes</h3>
+      <p>
+        If geolocation is denied by the user or returns invalid coordinates,
+        coordinates are calculated from the area of the user's timezone. In
+        these cases, information that is dependent upon those coordinates will
+        be show in italics.
+      </p>
     </div>
   )
 }
