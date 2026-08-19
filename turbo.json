@@ -37,6 +37,10 @@
     },
     "storybook": {
       "dependsOn": ["^storybook"]
+    },
+    "start": {
+      "dependsOn": ["transit", "@repo/ui#build", "lct#build"],
+      "persistent": true
     }
   }
 }
