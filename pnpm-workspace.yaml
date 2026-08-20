@@ -3,10 +3,6 @@ packages:
   - packages/*
 allowBuilds:
   esbuild: false
-minimumReleaseAgeExclude:
-  - "@mareuter/typescript-config@0.1.2"
-overrides:
-  "@mareuter/typescript-config": 0.1.2
 catalog:
   "@chromatic-com/storybook": ^5.2.1
   "@eslint/js": ^10.0.1
@@ -15,9 +11,9 @@ catalog:
   "@mareuter/prettier-config": ^0.1.2
   "@mareuter/typescript-config": ^0.1.2
   "@microsoft/api-extractor": ^7.58.12
-  "@react-router/dev": ^8
-  "@react-router/node": ^8
-  "@react-router/serve": ^8
+  "@react-router/dev": ^8.3.0
+  "@react-router/node": ^8.3.0
+  "@react-router/serve": ^8.3.0
   "@storybook/addon-a11y": ^10.4.6
   "@storybook/addon-console": ^3.0.0
   "@storybook/addon-docs": ^10.4.6
@@ -50,12 +46,12 @@ catalog:
   prettier-plugin-tailwindcss: ^0.8.0
   react: ^19.2.7
   react-dom: ^19.2.7
-  react-router: ^8
+  react-router: ^8.3.0
   storybook: ^10.4.6
-  tailwindcss: ^4.3.2
+  tailwindcss: ^4.3.3
   turbo: ^2.10.3
   typescript: ^6.0.3
   typescript-eslint: ^8.62.1
-  vite: ^8.1.1
+  vite: ^8.2.1
   vitest: ^4.1.9
   vitest-browser-react: ^2.2.0
