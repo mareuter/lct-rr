@@ -10,6 +10,8 @@
     "check-types": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "test": "pnpm exec playwright test",
+    "playwright:report": "pnpm exec playwright show-report",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc"
   },
@@ -27,6 +29,7 @@
     "@mareuter/eslint-config": "catalog:",
     "@mareuter/prettier-config": "catalog:",
     "@mareuter/typescript-config": "catalog:",
+    "@playwright/test": "^1.62.1",
     "@react-router/dev": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "@types/node": "catalog:",

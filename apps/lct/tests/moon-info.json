@@ -1,0 +1,50 @@
+{
+  "age": 13.892695999260468,
+  "colong": 83.97189956624061,
+  "fractional_phase": 0.9998519924481626,
+  "libration_lon": 5.23107551788429,
+  "libration_lat": -1.4788210646482465,
+  "libration_phase_angle": 105.7855572234932,
+  "altitude": -9.814919511832146,
+  "azimuth": 69.75156520051686,
+  "ra": 23.331890450649784,
+  "dec": 10.129795616523591,
+  "magnitude": -12.63,
+  "earth_distance": 386484.25078267464,
+  "subsolar_lat": -0.3366501792590513,
+  "angular_size": 0.5159071519639757,
+  "elongation": 178.56298828125,
+  "phase": "Full Moon",
+  "next_four_phases": {
+    "0": {
+      "phase": "full_moon",
+      "datetime": [2013, 10, 18, 23, 37, 39.633078]
+    },
+    "1": {
+      "phase": "last_quarter",
+      "datetime": [2013, 10, 26, 23, 40, 28.739246]
+    },
+    "2": {
+      "phase": "new_moon",
+      "datetime": [2013, 11, 3, 12, 49, 57.852996]
+    },
+    "3": {
+      "phase": "first_quarter",
+      "datetime": [2013, 11, 10, 5, 57, 10.402442]
+    }
+  },
+  "rise_set_times": {
+    "0": {
+      "time": "transit",
+      "datetime": [2013, 10, 18, 4, 43, 21]
+    },
+    "1": {
+      "time": "set",
+      "datetime": [2013, 10, 18, 11, 22, 18]
+    },
+    "2": {
+      "time": "rise",
+      "datetime": [2013, 10, 18, 22, 47, 40]
+    }
+  }
+}
