@@ -2,9 +2,9 @@ import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
 import type { DateContextType } from '../helpers/date-context'
 import type { GeoLocationContextType } from '../helpers/geolocation-context'
-import moonInfo from '../data/query/moon-info.json' with { type: 'json' }
-import lunarClubInfo from '../data/query/lunar-club.json' with { type: 'json' }
-import lunarTwoInfo from '../data/query/lunar-two.json' with { type: 'json' }
+import moonInfo from '@repo/data/query/moon-info.json' with { type: 'json' }
+import lunarClubInfo from '@repo/data/query/lunar-club.json' with { type: 'json' }
+import lunarTwoInfo from '@repo/data/query/lunar-two.json' with { type: 'json' }
 import { getData } from '../helpers/data'
 import { dateContext, geoLocationContext } from './contexts.mock'
 

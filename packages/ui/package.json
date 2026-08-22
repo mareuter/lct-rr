@@ -46,6 +46,7 @@
     "@mareuter/prettier-config": "catalog:",
     "@mareuter/typescript-config": "catalog:",
     "@microsoft/api-extractor": "catalog:",
+    "@repo/data": "workspace:*",
     "@storybook/addon-a11y": "catalog:",
     "@storybook/addon-console": "catalog:",
     "@storybook/addon-docs": "catalog:",

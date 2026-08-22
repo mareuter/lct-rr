@@ -31,6 +31,7 @@
     "@mareuter/typescript-config": "catalog:",
     "@playwright/test": "^1.62.1",
     "@react-router/dev": "catalog:",
+    "@repo/data": "workspace:*",
     "@tailwindcss/vite": "catalog:",
     "@types/node": "catalog:",
     "@types/react": "catalog:",

@@ -1,0 +1,19 @@
+{
+  "name": "@repo/data",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "type": "module",
+  "devDependencies": {
+    "@mareuter/prettier-config": "catalog:",
+    "prettier": "catalog:"
+  },
+  "lint-staged": {
+    "**/*.json": [
+      "pnpm format"
+    ]
+  }
+}

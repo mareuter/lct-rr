@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import moonInfo from './moon-info.json' with { type: 'json' }
+import moonInfo from '@repo/data/query/moon-info.json' with { type: 'json' }
 
 test('Does app launch', async ({ page }) => {
   await page.route('**/moon_info*', async (route) => {
