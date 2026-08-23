@@ -18,20 +18,20 @@
   ],
   "scripts": {
     "api-extractor": "api-extractor run --local --verbose",
-    "dev": "vite",
+    "dev": "tsc --watch",
     "build": "vite build && tsc --project tsconfig.build.json && pnpm run api-extractor",
     "lint": "eslint --max-warnings 0 .",
     "lint:fix": "eslint --fix .",
-    "check-types": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook:build": "storybook build",
     "test": "vitest",
-    "test-storybook": "vitest --project=storybook",
-    "test-helpers": "vitest --project=helpers",
-    "test-helpers:browser": "vitest --project=helpers-browser"
+    "test:storybook": "vitest --project=storybook",
+    "test:helpers": "vitest --project=helpers",
+    "test:helpers-browser": "vitest --project=helpers-browser"
   },
   "dependencies": {
     "@heroicons/react": "catalog:",
