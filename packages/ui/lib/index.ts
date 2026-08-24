@@ -5,6 +5,7 @@ import AboutInfo from './components/about-info'
 import CurrentPhase from './components/current-phase'
 import CurrentVisibility from './components/current-visibility'
 import Feature from './components/feature'
+import Footer from './components/footer'
 import LctLogo from './components/lct-logo'
 import NextFourPhases from './components/next-four-phases'
 import NoFeaturesVisible from './components/no-features-visible'
@@ -42,6 +43,7 @@ export {
   CurrentPhase,
   CurrentVisibility,
   Feature,
+  Footer,
   LctLogo,
   NextFourPhases,
   NoFeaturesVisible,
