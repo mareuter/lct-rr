@@ -1,0 +1,21 @@
+{
+  "age": 0,
+  "altitude": 0,
+  "azimuth": 0,
+  "colong": 0,
+  "fractional_phase": 0,
+  "phase": "Full Moon",
+  "next_phase": [],
+  "lunar_club": {
+    "time_events": false,
+    "phase_events": false,
+    "naked_eye": 0,
+    "binocular": 0,
+    "telescope": 0
+  },
+  "lunar_two": {
+    "features": 0,
+    "landing_sites": 0,
+    "altitude_events": false
+  }
+}

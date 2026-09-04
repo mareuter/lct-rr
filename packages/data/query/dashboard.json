@@ -1,0 +1,27 @@
+{
+  "age": 13.892695999260468,
+  "altitude": -9.814919511832146,
+  "azimuth": 69.75156520051686,
+  "colong": 83.97189956624061,
+  "fractional_phase": 0.9998519924481626,
+  "phase": "Full Moon",
+  "next_phase": [
+    {
+      "id": 0,
+      "phase": "full_moon",
+      "datetime": [2013, 10, 18, 23, 37, 39.633078]
+    }
+  ],
+  "lunar_club": {
+    "time_events": false,
+    "phase_events": true,
+    "naked_eye": 10,
+    "binocular": 2,
+    "telescope": 0
+  },
+  "lunar_two": {
+    "features": 11,
+    "landing_sites": 16,
+    "altitude_events": false
+  }
+}

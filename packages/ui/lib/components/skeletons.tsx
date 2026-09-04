@@ -40,7 +40,6 @@ export const SkeletonInfoBox = ({
     <div className="xs:max-w-md rounded-md border-2 shadow-md shadow-gray-600 dark:shadow-gray-400">
       <h1 className="xs:text-base pl-2 text-sm">{title}</h1>
       <hr className="mx-1 text-gray-700 dark:text-gray-300" />
-      <div className="xs:h-10 m-1 h-5 animate-pulse bg-gray-400 dark:bg-gray-300" />
       {children}
     </div>
   )
@@ -49,7 +48,7 @@ export const SkeletonInfoBox = ({
 export const SkeletonCurrentPhase = () => {
   return (
     <SkeletonInfoBox title="Current Phase">
-      <div />
+      <div className="xs:h-10 m-1 h-5 animate-pulse bg-gray-400 dark:bg-gray-300" />
       <div className="flex justify-center px-2 pb-2">
         <div className="size-20 animate-pulse bg-gray-400 dark:bg-gray-300" />
       </div>
@@ -60,7 +59,17 @@ export const SkeletonCurrentPhase = () => {
 export const SkeletonCurrentVisibility = () => {
   return (
     <SkeletonInfoBox title="Current Visibility">
-      <div />
+      <div className="xs:h-10 m-1 h-5 animate-pulse bg-gray-400 dark:bg-gray-300" />
+    </SkeletonInfoBox>
+  )
+}
+
+export const SkeletonNextPhase = () => {
+  return (
+    <SkeletonInfoBox title="Next Phase">
+      <div className="p-1">
+        <SkeletonPhaseCard />
+      </div>
     </SkeletonInfoBox>
   )
 }
@@ -70,7 +79,7 @@ export const SkeletonDashboard = () => {
     <div className="grid gap-4">
       <SkeletonCurrentVisibility />
       <SkeletonCurrentPhase />
-      <SkeletonNextFourPhases />
+      <SkeletonNextPhase />
     </div>
   )
 }

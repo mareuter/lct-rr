@@ -8,6 +8,7 @@ import Feature from './components/feature'
 import Footer from './components/footer'
 import LctLogo from './components/lct-logo'
 import NextFourPhases from './components/next-four-phases'
+import NextPhase from './components/next-phase'
 import NoFeaturesVisible from './components/no-features-visible'
 import Phase2D from './components/phase2d'
 import PhaseCard from './components/phase-card'
@@ -24,12 +25,13 @@ import GeoLocationProvider from './helpers/geolocation-provider'
 import { createUrl } from './helpers/urls'
 
 // Types
-import type { MoonInfoJson, PhaseList } from './definitions'
+import type { DashboardJson, MoonInfoJson, PhaseList } from './definitions'
 
 export type {
   DateContextType,
   LocationWithTz,
   GeoLocationContextType,
+  DashboardJson,
   MoonInfoJson,
   PhaseList,
 }
@@ -46,6 +48,7 @@ export {
   Footer,
   LctLogo,
   NextFourPhases,
+  NextPhase,
   NoFeaturesVisible,
   Phase2D,
   PhaseCard,

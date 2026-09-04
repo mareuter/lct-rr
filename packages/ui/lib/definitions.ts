@@ -4,7 +4,13 @@ export interface PhaseIcon {
 
 export interface Phase {
   phase: string
-  datetime: Array<number>
+  datetime: number[]
+}
+
+export interface PhaseInfo {
+  id: number
+  phase: string
+  datetime: number[]
 }
 
 export interface PhaseList {
@@ -66,4 +72,30 @@ export interface MoonInfoJson {
   elongation: number
   phase: string
   next_four_phases: PhaseList
+}
+
+export interface LunarClubSummary {
+  time_events: boolean
+  phase_events: boolean
+  naked_eye: number
+  binocular: number
+  telescope: number
+}
+
+export interface LunarTwoSummary {
+  features: number
+  landing_sites: number
+  altitude_events: boolean
+}
+
+export interface DashboardJson {
+  age: number
+  altitude: number
+  azimuth: number
+  colong: number
+  fractional_phase: number
+  phase: string
+  next_phase: PhaseInfo[]
+  lunar_club: LunarClubSummary
+  lunar_two: LunarTwoSummary
 }
