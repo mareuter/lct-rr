@@ -1,6 +1,6 @@
 import type { LocationWithTz } from './geolocation-context'
 
-const WEB_API = 'https://lct-web.onrender.com'
+const WEB_API = 'https://lct-web-dev.onrender.com'
 
 export const createUrl = (
   api: string,
@@ -14,7 +14,7 @@ export const createUrl = (
     lon: location.longitude.toString(),
   })
 
-  if (api == 'moon_info') {
+  if (api == 'moon_info' || api == 'dashboard') {
     params.append('tz', location.timezone)
   }
 
