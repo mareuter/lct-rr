@@ -8,10 +8,12 @@ import {
   createUrl,
   CurrentVisibility,
   CurrentPhase,
-  type MoonInfoJson,
-  NextFourPhases,
+  type DashboardJson,
+  NextPhase,
   SkeletonDashboard,
   LocationWithTz,
+  LunarClubCard,
+  LunarTwoCard,
 } from '@repo/ui'
 
 export function HydrateFallback() {
@@ -22,36 +24,41 @@ const Dashboard = ({
   p,
   l,
 }: {
-  p: Promise<MoonInfoJson> | undefined
+  p: Promise<DashboardJson> | undefined
   l: LocationWithTz
 }) => {
   if (!p) {
     return <SkeletonDashboard />
   }
-  const moonInfo = use(p)
-  console.log(`V: ${moonInfo.age}, ${moonInfo.altitude}, ${moonInfo.colong}`)
+  const dashboardInfo = use(p)
+  console.log(
+    `V: ${dashboardInfo.age}, ${dashboardInfo.altitude}, ${dashboardInfo.colong}`,
+  )
   return (
     <>
       <div className="flex flex-col py-2">
         <CurrentVisibility
-          altitude={moonInfo.altitude}
-          azimuth={moonInfo.azimuth}
+          altitude={dashboardInfo.altitude}
+          azimuth={dashboardInfo.azimuth}
           coordsGood={l.good}
         />
       </div>
       <div className="py-2">
         <CurrentPhase
-          phaseName={moonInfo.phase}
-          moonAge={moonInfo.age}
-          fraction={moonInfo.fractional_phase}
-          colong={moonInfo.colong}
+          phaseName={dashboardInfo.phase}
+          moonAge={dashboardInfo.age}
+          fraction={dashboardInfo.fractional_phase}
+          colong={dashboardInfo.colong}
         />
       </div>
+      <div className="py-2">
+        <NextPhase phaseList={dashboardInfo.next_phase} timezone={l.timezone} />
+      </div>
+      <div className="py-2">
+        <LunarClubCard summary={dashboardInfo.lunar_club} />
+      </div>
       <div className="pt-2">
-        <NextFourPhases
-          phaseList={moonInfo.next_four_phases}
-          timezone={l.timezone}
-        />
+        <LunarTwoCard summary={dashboardInfo.lunar_two} />
       </div>
     </>
   )
@@ -63,13 +70,13 @@ const Home = () => {
   console.log(
     `Z: ${date}, ${location.good}, ${location.latitude}, ${location.longitude}, ${location.timezone}`,
   )
-  const [dashboardInfo, setDashboardInfo] = useState<Promise<MoonInfoJson>>()
+  const [dashboardInfo, setDashboardInfo] = useState<Promise<DashboardJson>>()
 
   useEffect(() => {
     console.log('Fetching data')
     const fetchData = async () => {
       console.log('QQQ')
-      const url = createUrl('moon_info', date, location)
+      const url = createUrl('dashboard', date, location)
       const response = await fetch(url)
       console.log(`F: ${response.ok}`)
       if (!response.ok) {
