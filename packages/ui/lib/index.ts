@@ -8,6 +8,7 @@ import Feature from './components/feature'
 import Footer from './components/footer'
 import LctLogo from './components/lct-logo'
 import LunarClubCard from './components/lunar-club-card'
+import LunarTwoCard from './components/lunar-two-card'
 import NextFourPhases from './components/next-four-phases'
 import NextPhase from './components/next-phase'
 import NoFeaturesVisible from './components/no-features-visible'
@@ -49,6 +50,7 @@ export {
   Footer,
   LctLogo,
   LunarClubCard,
+  LunarTwoCard,
   NextFourPhases,
   NextPhase,
   NoFeaturesVisible,

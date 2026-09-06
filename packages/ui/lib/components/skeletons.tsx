@@ -93,6 +93,21 @@ export const SkeletonLunarClubCard = () => {
   )
 }
 
+export const SkeletonLunarTwoCard = () => {
+  return (
+    <SkeletonInfoBox title="Lunar Two Summary">
+      <div className="grid grid-cols-3 grid-rows-2 items-center justify-center justify-items-center gap-1 px-1 pt-1 text-center">
+        <div className="xs:h-12 xs:w-20 h-10 w-16 animate-pulse bg-gray-400 dark:bg-gray-300" />
+        <div className="xs:h-12 xs:w-20 h-10 w-16 animate-pulse bg-gray-400 dark:bg-gray-300" />
+        <div className="xs:h-12 xs:w-20 h-10 w-16 animate-pulse bg-gray-400 dark:bg-gray-300" />
+        <div className="xs:size-8 size-6 animate-pulse bg-gray-400 dark:bg-gray-300" />
+        <div className="xs:size-8 size-6 animate-pulse bg-gray-400 dark:bg-gray-300" />
+        <div className="xs:size-8 size-6 animate-pulse bg-gray-400 dark:bg-gray-300" />
+      </div>
+    </SkeletonInfoBox>
+  )
+}
+
 export const SkeletonDashboard = () => {
   return (
     <div className="grid gap-4">
@@ -100,6 +115,7 @@ export const SkeletonDashboard = () => {
       <SkeletonCurrentPhase />
       <SkeletonNextPhase />
       <SkeletonLunarClubCard />
+      <SkeletonLunarTwoCard />
     </div>
   )
 }
