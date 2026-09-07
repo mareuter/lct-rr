@@ -10,6 +10,19 @@
   --color-foreground-dark: rgb(240, 240, 240);
 
   --breakpoint-xs: 30rem;
+
+  --animate-slide-in-left: slide-in-left 800ms ease;
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 
 /* This doesn't work for some reason.

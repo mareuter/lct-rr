@@ -37,7 +37,8 @@
     "@heroicons/react": "catalog:",
     "luxon": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "catalog:",

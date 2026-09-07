@@ -15,6 +15,8 @@ import NoFeaturesVisible from './components/no-features-visible'
 import Phase2D from './components/phase2d'
 import PhaseCard from './components/phase-card'
 import { SkeletonDashboard } from './components/skeletons'
+import AboutMenuItem from './components/menu/about-menu-item'
+import NavBarMenu from './components/nav-bar-menu'
 
 // Helpers
 import DateContext, { type DateContextType } from './helpers/date-context'
@@ -57,4 +59,6 @@ export {
   Phase2D,
   PhaseCard,
   SkeletonDashboard,
+  AboutMenuItem,
+  NavBarMenu,
 }

@@ -15,6 +15,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@heroicons/react": "catalog:",
     "@react-router/node": "catalog:",
     "@react-router/serve": "catalog:",
     "@repo/ui": "workspace:*",
