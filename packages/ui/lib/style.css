@@ -36,6 +36,8 @@
       opacity: 0;
     }
   }
+
+  --background-image-moon: url('/images/Full_Moon_large.png');
 }
 
 /* This doesn't work for some reason.

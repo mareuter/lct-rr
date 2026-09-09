@@ -1,6 +1,6 @@
 const AboutInfo = ({ version }: { version: string }) => {
   return (
-    <div className="xs:max-w-md flex flex-col items-center-safe">
+    <div className="xs:max-w-md flex grow flex-col items-center-safe">
       <h1 className="py-1 text-3xl">Lunar Club Tools</h1>
       <h2 className="py-1 text-2xl">Version: {version}</h2>
       <p>

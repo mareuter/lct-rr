@@ -2,6 +2,7 @@ import './style.css'
 
 // Components
 import AboutInfo from './components/about-info'
+import AboutPage from './components/about-page'
 import CurrentPhase from './components/current-phase'
 import CurrentVisibility from './components/current-visibility'
 import Feature from './components/feature'
@@ -46,6 +47,7 @@ export {
   GeoLocationProvider,
   createUrl,
   AboutInfo,
+  AboutPage,
   CurrentPhase,
   CurrentVisibility,
   Feature,
