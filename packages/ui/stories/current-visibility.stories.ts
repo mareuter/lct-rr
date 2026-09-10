@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import CurrentVisibility from '../lib/components/current-visibility'
-import moonInfo from '@repo/data/query/moon-info.json' with { type: 'json' }
+import dashboardInfo from '@repo/data/query/dashboard.json' with { type: 'json' }
 
 const meta: Meta<typeof CurrentVisibility> = {
   component: CurrentVisibility,
@@ -12,8 +12,8 @@ type Story = StoryObj<typeof CurrentVisibility>
 
 export const Default: Story = {
   args: {
-    altitude: moonInfo.altitude,
-    azimuth: moonInfo.azimuth,
+    altitude: dashboardInfo.altitude,
+    azimuth: dashboardInfo.azimuth,
     coordsGood: true,
   },
 }
@@ -28,8 +28,8 @@ export const Up: Story = {
 
 export const BadCoords: Story = {
   args: {
-    altitude: moonInfo.altitude,
-    azimuth: moonInfo.azimuth,
+    altitude: dashboardInfo.altitude,
+    azimuth: dashboardInfo.azimuth,
     coordsGood: false,
   },
 }

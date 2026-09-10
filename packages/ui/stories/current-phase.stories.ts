@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import CurrentPhase from '../lib/components/current-phase'
-import moonInfo from '@repo/data/query/moon-info.json' with { type: 'json' }
+import dashboardInfo from '@repo/data/query/dashboard.json' with { type: 'json' }
 
 const meta: Meta<typeof CurrentPhase> = {
   component: CurrentPhase,
@@ -12,10 +12,10 @@ type Story = StoryObj<typeof CurrentPhase>
 
 export const Default: Story = {
   args: {
-    phaseName: moonInfo.phase,
-    moonAge: moonInfo.age,
-    fraction: moonInfo.fractional_phase,
-    colong: moonInfo.colong,
+    phaseName: dashboardInfo.phase,
+    moonAge: dashboardInfo.age,
+    fraction: dashboardInfo.fractional_phase,
+    colong: dashboardInfo.colong,
   },
 }
 

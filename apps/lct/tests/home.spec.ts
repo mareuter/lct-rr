@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test'
-import moonInfo from '@repo/data/query/moon-info.json' with { type: 'json' }
+import dashboardInfo from '@repo/data/query/dashboard.json' with { type: 'json' }
 
 test('Does app launch', async ({ page }) => {
-  await page.route('**/moon_info*', async (route) => {
-    await route.fulfill({ status: 200, json: moonInfo })
+  await page.route('**/dashboard*', async (route) => {
+    await route.fulfill({ status: 200, json: dashboardInfo })
   })
   await page.goto('/')
   await expect(page).toHaveTitle(/Lunar Club Tools/)
@@ -16,7 +16,11 @@ test('Does app launch', async ({ page }) => {
     page.getByRole('heading', { name: 'Current Phase' }),
   ).toBeVisible()
   await expect(page.getByText('FULL MOON')).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Next Phase' })).toBeVisible()
   await expect(
-    page.getByRole('heading', { name: 'Next Four Phases' }),
+    page.getByRole('heading', { name: 'Lunar Club Summary' }),
+  ).toBeVisible()
+  await expect(
+    page.getByRole('heading', { name: 'Lunar Two Summary' }),
   ).toBeVisible()
 })
