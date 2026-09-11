@@ -1,5 +1,5 @@
-import AboutMenuItem from '../lib/components/menu/about-menu-item'
-import NavBarMenu from '../lib/components/nav-bar-menu'
+import AboutMenuItem from '../../lib/components/menu/about-menu-item'
+import NavBarMenu from '../../lib/components/nav-bar-menu'
 
 const TestSideMenu = () => {
   return (

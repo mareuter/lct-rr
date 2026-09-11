@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import { expect } from 'storybook/test'
 
-import TestSideMenu from './test-side-menu'
+import TestSideMenu from './components/test-side-menu'
 
 const meta: Meta<typeof TestSideMenu> = {
   component: TestSideMenu,
