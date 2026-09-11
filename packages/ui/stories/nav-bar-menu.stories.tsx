@@ -16,7 +16,15 @@ export default meta
 type Story = StoryObj<typeof TestSideMenu>
 
 export const Default: Story = {
-  args: {},
+  args: {
+    currentDate: new Date(),
+    currentLocationWithTz: {
+      latitude: 35.96,
+      longitude: -84.32,
+      good: true,
+      timezone: 'America/New_York',
+    },
+  },
   play: async ({ canvas, userEvent }) => {
     await expect(document.getElementById('menu')).not.toHaveClass(
       'overflow-hidden',

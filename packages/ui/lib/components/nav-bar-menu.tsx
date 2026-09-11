@@ -2,8 +2,18 @@ import { type ReactNode, type RefObject, useRef, useState } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { useOnClickOutside } from 'usehooks-ts'
 import LctLogo from './lct-logo'
+import Footer from './footer'
+import { type LocationWithTz } from '../helpers/geolocation-context'
 
-const NavBarMenu = ({ children }: { children: ReactNode }) => {
+const NavBarMenu = ({
+  currentDate,
+  currentLocationWithTz,
+  children,
+}: {
+  currentDate: Date
+  currentLocationWithTz: LocationWithTz
+  children: ReactNode
+}) => {
   const ref = useRef<HTMLDivElement>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -45,6 +55,12 @@ const NavBarMenu = ({ children }: { children: ReactNode }) => {
         <LctLogo />
         <div className="py-2" />
         {children}
+        <div className="fixed bottom-0">
+          <Footer
+            currentDate={currentDate}
+            currentLocationWithTz={currentLocationWithTz}
+          />
+        </div>
       </div>
     </div>
   )

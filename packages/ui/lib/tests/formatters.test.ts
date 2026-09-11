@@ -9,6 +9,7 @@ import {
   formatTimeWithMinutes,
   formatTimeWithMinutesSplit,
   formatTimeWithSeconds,
+  formatTimeWithSecondsSplit,
   getSecondsTimestamp,
 } from '../helpers/formatters'
 
@@ -78,6 +79,17 @@ describe('Formatting Time Labels', () => {
   it('Local Time with Short Timezone Label', () => {
     const output = '2019-06-07 23:30:00 EDT'
     expect(formatTimeWithSeconds(testDate, timezone, true, true)).toBe(output)
+  })
+
+  it('Local Time with Short Timezone Label, Split', () => {
+    const dateStr = '2019-06-07'
+    const timeStr = '23:30:00 EDT'
+    expect(
+      formatTimeWithSecondsSplit(testDate, timezone, true, true),
+    ).toStrictEqual({
+      date: dateStr,
+      time: timeStr,
+    })
   })
 
   it('Local Time with Hours and Minutes Only', () => {

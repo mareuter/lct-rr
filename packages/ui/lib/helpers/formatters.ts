@@ -63,6 +63,26 @@ export function formatTimeWithSeconds(
   return dateString
 }
 
+export function formatTimeWithSecondsSplit(
+  timestamp: number,
+  timezone: string,
+  showTz: boolean = false,
+  useShortTz: boolean = false,
+) {
+  const date = DateTime.fromSeconds(timestamp).setZone(timezone)
+  const dateString = date.toFormat('y-MM-dd')
+  let timeString = date.toFormat('HH:mm:ss')
+
+  if (showTz) {
+    if (useShortTz) {
+      timeString += ' ' + date.offsetNameShort
+    } else {
+      timeString += ' ' + date.zoneName
+    }
+  }
+  return { date: dateString, time: timeString }
+}
+
 export const formatTimeWithMinutes = (
   timeTuple: Array<number>,
   timezone: string,
