@@ -24,7 +24,7 @@ const Footer = ({
   )
 
   return (
-    <div className="max-w-xs shadow-md shadow-gray-800 dark:shadow-gray-200">
+    <div className="max-w-xs">
       <hr />
       <div className="grid grid-cols-6 gap-x-2">
         <p className="col-span-2 pl-1 text-xs">Date:</p>
