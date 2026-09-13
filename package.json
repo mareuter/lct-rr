@@ -20,6 +20,7 @@
     "@mareuter/prettier-config": "catalog:",
     "husky": "catalog:",
     "lint-staged": "catalog:",
+    "playwright": "catalog:",
     "prettier": "catalog:",
     "turbo": "catalog:"
   },

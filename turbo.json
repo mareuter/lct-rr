@@ -25,6 +25,7 @@
       "inputs": ["$TURBO_DEFAULT$"],
       "dependsOn": ["transit"],
       "outputs": ["coverage.json"],
+      "passThroughEnv": ["PLAYWRIGHT_*"],
       "persistent": true
     },
     "transit": {

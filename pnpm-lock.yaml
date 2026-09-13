@@ -173,6 +173,9 @@ importers:
       lint-staged:
         specifier: 'catalog:'
         version: 17.3.0
+      playwright:
+        specifier: 'catalog:'
+        version: 1.62.1
       prettier:
         specifier: 'catalog:'
         version: 3.9.6
@@ -388,9 +391,6 @@ importers:
       globals:
         specifier: 'catalog:'
         version: 17.11.0
-      playwright:
-        specifier: 'catalog:'
-        version: 1.62.1
       prettier-plugin-tailwindcss:
         specifier: 'catalog:'
         version: 0.8.1(prettier@3.9.6)
