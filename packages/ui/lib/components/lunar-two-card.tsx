@@ -4,7 +4,7 @@ import type { LunarTwoSummary } from '../definitions'
 import InfoBox from './info-box'
 
 const LunarTwoCard = ({ summary }: { summary: LunarTwoSummary }) => {
-  let iconStyling = 'size-6 xs:size-8'
+  let iconStyling = 'size-6 xs:size-8 pb-1'
   if (summary.altitude_events) {
     iconStyling += ' text-blue-500'
   }

@@ -2,7 +2,7 @@ import { type ReactNode } from 'react'
 
 export const SkeletonPhaseCard = () => {
   return (
-    <div className="xs:max-w-md flex flex-row justify-evenly rounded-md border-2 bg-gray-300 py-2 shadow-md shadow-gray-600 dark:bg-gray-600 dark:shadow-gray-400">
+    <div className="xs:max-w-md flex flex-row justify-evenly rounded-md border-2 py-2 shadow-md shadow-gray-600 dark:shadow-gray-400">
       <div className="align-center flex aspect-square size-25 items-center">
         <div className="size-full animate-pulse bg-gray-400 dark:bg-gray-300" />
       </div>
