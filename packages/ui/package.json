@@ -27,6 +27,7 @@
     "format:check": "prettier --check .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
+    "storybook:docs": "storybook dev --docs",
     "storybook:build": "storybook build",
     "test": "vitest",
     "test:storybook": "vitest --project=storybook",
