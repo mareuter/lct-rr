@@ -4,6 +4,7 @@ import TestAboutPage from './components/test-about-page'
 
 const meta: Meta<typeof TestAboutPage> = {
   component: TestAboutPage,
+  title: 'About/AboutPage',
   parameters: {
     layout: 'fullscreen',
   },

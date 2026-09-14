@@ -4,6 +4,7 @@ import NoFeaturesVisible from '../lib/components/no-features-visible'
 
 const meta: Meta<typeof NoFeaturesVisible> = {
   component: NoFeaturesVisible,
+  title: 'Feature/NoFeaturesVisible',
 }
 
 export default meta

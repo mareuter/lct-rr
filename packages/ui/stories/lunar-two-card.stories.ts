@@ -5,6 +5,7 @@ import dashboardInfo from '@repo/data/query/dashboard.json' with { type: 'json' 
 
 const meta: Meta<typeof LunarTwoCard> = {
   component: LunarTwoCard,
+  title: 'Dashboard/LunarTwoCard',
 }
 
 export default meta

@@ -5,6 +5,7 @@ import dashboardInfo from '@repo/data/query/dashboard.json' with { type: 'json' 
 
 const meta: Meta<typeof CurrentVisibility> = {
   component: CurrentVisibility,
+  title: 'Dashboard/CurrentVisibility',
 }
 
 export default meta

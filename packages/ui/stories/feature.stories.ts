@@ -5,6 +5,7 @@ import { type LunarFeature } from '../lib/definitions'
 
 const meta: Meta<typeof Feature> = {
   component: Feature,
+  title: 'Feature/Feature',
 }
 
 export default meta

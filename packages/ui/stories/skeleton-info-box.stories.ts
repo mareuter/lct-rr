@@ -4,6 +4,7 @@ import { SkeletonInfoBox } from '../lib/components/skeletons'
 
 const meta: Meta<typeof SkeletonInfoBox> = {
   component: SkeletonInfoBox,
+  title: 'Skeletons/SkeletonInfoBox',
 }
 
 export default meta

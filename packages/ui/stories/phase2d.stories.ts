@@ -4,6 +4,7 @@ import Phase2D from '../lib/components/phase2d'
 
 const meta: Meta<typeof Phase2D> = {
   component: Phase2D,
+  title: 'SubComponents/Phase2D',
   argTypes: {
     fraction: {
       control: {

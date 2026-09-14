@@ -4,6 +4,7 @@ import AboutMenuItem from '../lib/components/menu/about-menu-item'
 
 const meta: Meta<typeof AboutMenuItem> = {
   component: AboutMenuItem,
+  title: 'NavBar/AboutMenuItem',
   argTypes: {
     isActive: {
       control: {

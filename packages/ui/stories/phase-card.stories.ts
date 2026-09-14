@@ -4,6 +4,7 @@ import PhaseCard from '../lib/components/phase-card'
 
 const meta: Meta<typeof PhaseCard> = {
   component: PhaseCard,
+  title: 'SubComponents/PhaseCard',
 }
 
 export default meta

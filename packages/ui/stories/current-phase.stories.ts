@@ -5,6 +5,7 @@ import dashboardInfo from '@repo/data/query/dashboard.json' with { type: 'json' 
 
 const meta: Meta<typeof CurrentPhase> = {
   component: CurrentPhase,
+  title: 'Dashboard/CurrentPhase',
 }
 
 export default meta

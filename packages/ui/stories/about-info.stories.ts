@@ -4,6 +4,7 @@ import AboutInfo from '../lib/components/about-info'
 
 const meta: Meta<typeof AboutInfo> = {
   component: AboutInfo,
+  title: 'About/AboutInfo',
 }
 
 export default meta

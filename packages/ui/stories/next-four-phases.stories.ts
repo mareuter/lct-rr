@@ -5,6 +5,7 @@ import moonInfo from '@repo/data/query/moon-info.json' with { type: 'json' }
 
 const meta: Meta<typeof NextFourPhases> = {
   component: NextFourPhases,
+  title: 'Lunar Club/NextFourPhases',
 }
 
 export default meta

@@ -4,6 +4,7 @@ import { SkeletonPhaseCard } from '../lib/components/skeletons'
 
 const meta: Meta<typeof SkeletonPhaseCard> = {
   component: SkeletonPhaseCard,
+  title: 'Skeletons/SkeletonPhaseCard',
 }
 
 export default meta

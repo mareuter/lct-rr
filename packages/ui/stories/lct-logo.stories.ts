@@ -4,6 +4,7 @@ import LctLogo from '../lib/components/lct-logo'
 
 const meta: Meta<typeof LctLogo> = {
   component: LctLogo,
+  title: 'NavBar/LctLogo',
 }
 
 export default meta

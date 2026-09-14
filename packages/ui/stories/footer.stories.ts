@@ -4,6 +4,7 @@ import Footer from '../lib/components/footer'
 
 const meta: Meta<typeof Footer> = {
   component: Footer,
+  title: 'NavBar/Footer',
 }
 
 export default meta
