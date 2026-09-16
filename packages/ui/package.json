@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "api-extractor": "api-extractor run --local --verbose",
-    "dev": "tsc --watch",
+    "dev": "vite build --mode development --watch",
     "build": "vite build && tsc --project tsconfig.build.json && pnpm run api-extractor",
     "lint": "eslint --max-warnings 0 .",
     "lint:fix": "eslint --fix .",
