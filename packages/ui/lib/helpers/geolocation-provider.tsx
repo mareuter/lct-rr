@@ -29,10 +29,8 @@ const GeoLocationProvider = ({ children }: { children: ReactNode }) => {
 
     function showError(error: GeolocationPositionError) {
       let message
-      console.log('CCCC')
       switch (error.code) {
         case GeolocationPositionError.PERMISSION_DENIED:
-          console.log('CCCCC')
           message = 'User denied the request for Geolocation.'
           break
         case GeolocationPositionError.POSITION_UNAVAILABLE:
@@ -47,7 +45,6 @@ const GeoLocationProvider = ({ children }: { children: ReactNode }) => {
       }
       message += ' Using average latitude/longitude from timezone.'
       message += ' Inaccurate information shown in italics!'
-      console.log('CCC')
       alert(message)
       const avgCoordinates = getAverageTimezoneCoordinates(timezone)
       setLocation({
