@@ -4,6 +4,7 @@ import { useOnClickOutside } from 'usehooks-ts'
 import LctLogo from './lct-logo'
 import Footer from './footer'
 import { type LocationWithTz } from '../helpers/geolocation-context'
+import ThemeSwitcher from './theme-switcher'
 
 const NavBarMenu = ({
   currentDate,
@@ -42,11 +43,12 @@ const NavBarMenu = ({
   return (
     <div className="flex flex-row justify-between">
       <button onClick={toggleMenu}>
-        <Bars3Icon className="size-8 hover:text-blue-700 hover:outline-1 hover:outline-blue-700" />
+        <Bars3Icon className="ml-1 size-8 hover:outline-1 hover:outline-blue-700" />
         <p className="sr-only">Side Menu</p>
       </button>
       <p className="px-2 align-middle text-lg">Lunar Club Tools</p>
       <div className="w-40 py-2" />
+      <ThemeSwitcher />
       <div
         id="menu"
         ref={ref}
