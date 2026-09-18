@@ -47,7 +47,7 @@ const ThemeSwitcher = () => {
     <div>
       <button
         className="my-1 mr-1 hover:rounded-full hover:outline-1 hover:outline-blue-700"
-        aria-label={`Switch to ${theme} ${theme === 'system' ? 'preference' : 'mode'}`}
+        aria-label={`Switch to ${Themes[getNextIndex()]} ${Themes[getNextIndex()] === 'system' ? 'preference' : 'mode'}`}
         onClick={toggleTheme}
       >
         {'light' === Themes[getNextIndex()] ? (
