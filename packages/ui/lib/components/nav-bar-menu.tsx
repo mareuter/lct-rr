@@ -41,13 +41,13 @@ const NavBarMenu = ({
   useOnClickOutside(ref as RefObject<HTMLElement>, hideMenu)
 
   return (
-    <div className="flex flex-row justify-between">
+    <div className="flex flex-row items-center justify-between">
       <button onClick={toggleMenu}>
-        <Bars3Icon className="ml-1 size-8 hover:outline-1 hover:outline-blue-700" />
+        <Bars3Icon className="mx-1 size-8 hover:outline-1 hover:outline-blue-700" />
         <p className="sr-only">Side Menu</p>
       </button>
       <p className="px-2 align-middle text-lg">Lunar Club Tools</p>
-      <div className="w-40 py-2" />
+      <div className="h-10 w-16 grow" />
       <ThemeSwitcher />
       <div
         id="menu"
