@@ -2,7 +2,7 @@ import full_moon_icon from '../../assets/full_moon_icon.png'
 
 const LctLogo = () => {
   return (
-    <div className="flex flex-row items-center justify-start rounded-md bg-gray-300 py-2 pl-1 sm:h-40 sm:max-w-3xs sm:flex-col sm:justify-end dark:bg-gray-500">
+    <div className="flex flex-row items-center justify-start rounded-md bg-gray-300 py-2 pl-1 sm:h-40 sm:max-w-3xs sm:flex-col sm:justify-end lg:hidden dark:bg-gray-500">
       <img
         src={full_moon_icon}
         alt="Full Moon"

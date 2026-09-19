@@ -110,7 +110,7 @@ export const SkeletonLunarTwoCard = () => {
 
 export const SkeletonDashboard = () => {
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-4 lg:ml-[30vw]">
       <SkeletonCurrentVisibility />
       <SkeletonCurrentPhase />
       <SkeletonNextPhase />

@@ -35,7 +35,7 @@ const Dashboard = ({
     `V: ${dashboardInfo.age}, ${dashboardInfo.altitude}, ${dashboardInfo.colong}`,
   )
   return (
-    <>
+    <div className="lg:ml-[30vw]">
       <div className="flex flex-col py-2">
         <CurrentVisibility
           altitude={dashboardInfo.altitude}
@@ -60,7 +60,7 @@ const Dashboard = ({
       <div className="pt-2">
         <LunarTwoCard summary={dashboardInfo.lunar_two} />
       </div>
-    </>
+    </div>
   )
 }
 
