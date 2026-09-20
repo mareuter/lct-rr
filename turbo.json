@@ -23,7 +23,8 @@
     },
     "test": {
       "inputs": ["$TURBO_DEFAULT$"],
-      "dependsOn": ["^build", "transit"],
+      "with": ["lct#build"],
+      "dependsOn": ["transit"],
       "outputs": ["coverage/**", "playwright-report/**"],
       "passThroughEnv": ["PLAYWRIGHT_*"],
       "persistent": true
