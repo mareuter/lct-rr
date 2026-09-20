@@ -11,7 +11,7 @@
     "format:check": "prettier --check .",
     "test": "pnpm exec playwright test",
     "playwright:report": "pnpm exec playwright show-report",
-    "start": "react-router-serve ./build/server/index.js",
+    "start": "react-router-serve ./dist/server/index.js",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
