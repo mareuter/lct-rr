@@ -62,7 +62,7 @@ const NavBarMenu = ({
       <div
         id="menu"
         ref={ref}
-        className={`xs:w-[35vw] fixed top-0 left-0 z-100 h-screen w-[60vw] bg-gray-100 transition-colors lg:-z-1 lg:mt-12 lg:w-[20vw] lg:transform-none dark:bg-gray-700 ${isMenuOpen ? 'animate-slide-in-left transform-[translate3d(0vw,0,0)] overflow-hidden' : 'transform-[translate3d(-60vw,0,0)]'}`}
+        className={`xs:w-[35vw] fixed top-0 left-0 z-100 h-screen w-[60vw] bg-gray-100 transition-colors lg:z-0 lg:mt-12 lg:w-[20vw] lg:transform-none dark:bg-gray-700 ${isMenuOpen ? 'animate-slide-in-left transform-[translate3d(0vw,0,0)] overflow-hidden' : 'transform-[translate3d(-60vw,0,0)]'}`}
       >
         <LctLogo />
         <div className="py-2" />

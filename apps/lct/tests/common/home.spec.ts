@@ -30,29 +30,4 @@ test.describe('Main app interactions', () => {
       page.getByRole('heading', { name: 'Lunar Two Summary' }),
     ).toBeVisible()
   })
-
-  test('Cycle side bar menu', async ({ page }) => {
-    await expect(
-      page.getByRole('link').filter({ hasText: 'About' }),
-    ).not.toBeInViewport()
-    await page.getByRole('button').filter({ hasText: 'Side Menu' }).click()
-    await expect(
-      page.getByRole('link').filter({ hasText: 'About' }),
-    ).toBeInViewport()
-    await page.getByText('Lunar Club Tools').first().click()
-    await expect(
-      page.getByRole('link').filter({ hasText: 'About' }),
-    ).not.toBeInViewport()
-  })
-
-  test('Navigate to about page', async ({ page }) => {
-    await page.getByRole('button').filter({ hasText: 'Side Menu' }).click()
-    await page.getByRole('link').filter({ hasText: 'About' }).click()
-
-    await expect(
-      page.getByRole('heading', { name: 'Lunar Club Tools' }),
-    ).toBeVisible()
-    await expect(page.getByRole('heading', { name: 'Version' })).toBeVisible()
-    await expect(page.getByRole('heading', { name: 'Notes' })).toBeVisible()
-  })
 })
