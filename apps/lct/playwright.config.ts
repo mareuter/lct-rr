@@ -37,16 +37,19 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      testMatch: ['**/tests/common/*.spec.ts', '**/tests/browser/*.spec.ts'],
     },
 
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
+      testMatch: ['**/tests/common/*.spec.ts', '**/tests/browser/*.spec.ts'],
     },
 
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+      testMatch: ['**/tests/common/*.spec.ts', '**/tests/browser/*.spec.ts'],
     },
 
     /* Test against mobile viewports. */
@@ -54,10 +57,11 @@ export default defineConfig({
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },
     // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
+    {
+      name: 'Mobile Safari',
+      use: { ...devices['iPhone 13'] },
+      testMatch: ['**/tests/common/*.spec.ts', '**/tests/mobile/*.spec.ts'],
+    },
 
     /* Test against branded browsers. */
     // {
@@ -74,7 +78,8 @@ export default defineConfig({
   webServer: {
     command: 'pnpm start',
     url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
+    // reuseExistingServer: !process.env.CI,
+    reuseExistingServer: true,
     timeout: 120 * 1000,
   },
 })
