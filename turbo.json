@@ -17,7 +17,7 @@
       "dependsOn": ["^typecheck"]
     },
     "dev": {
-      "with": ["@repo/ui#dev"],
+      "with": ["ui#dev"],
       "cache": false,
       "persistent": true
     },
@@ -41,7 +41,7 @@
       "dependsOn": ["^storybook"]
     },
     "start": {
-      "dependsOn": ["transit", "@repo/ui#build", "lct#build"],
+      "dependsOn": ["transit", "ui#build", "lct#build"],
       "persistent": true
     }
   }
