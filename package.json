@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --output-logs new-only",
     "typecheck": "turbo run typecheck",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -11,7 +11,7 @@
     "format": "turbo run format",
     "format:check": "turbo run format:check",
     "start": "turbo run start",
-    "test": "turbo run test",
+    "test": "turbo run test --output-logs new-only",
     "view-report": "turbo run view-report",
     "prepare": "husky",
     "storybook": "turbo run storybook"
