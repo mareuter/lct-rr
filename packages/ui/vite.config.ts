@@ -34,6 +34,10 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [react(), tailwindcss()],
     test: {
+      coverage: {
+        include: ['lib/**/*.{ts,tsx}'],
+        exclude: ['lib/**/index.*'],
+      },
       projects: [
         {
           extends: true,
