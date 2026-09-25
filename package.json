@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "turbo run build --output-logs new-only",
+    "build": "turbo run build",
     "typecheck": "turbo run typecheck",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -11,7 +11,9 @@
     "format": "turbo run format",
     "format:check": "turbo run format:check",
     "start": "turbo run start",
-    "test": "turbo run test --output-logs new-only",
+    "test": "turbo run test",
+    "test:unit": "turbo run test:unit",
+    "test:e2e": "turbo run test:e2e",
     "view-report": "turbo run view-report",
     "prepare": "husky",
     "storybook": "turbo run storybook"

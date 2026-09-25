@@ -4,7 +4,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      // "outputLogs": "new-only",
       "outputs": ["dist/**"]
     },
     "lint": {
@@ -17,15 +17,26 @@
       "dependsOn": ["^typecheck"]
     },
     "dev": {
-      "with": ["ui#dev"],
       "cache": false,
       "persistent": true
     },
+    "test:unit": {
+      "dependsOn": ["^test:unit"],
+      "outputs": ["coverage/**"],
+      "passThroughEnv": ["PLAYWRIGHT_*"]
+    },
+    "test:e2e": {
+      "dependsOn": ["^test:e2e"],
+      "outputs": ["playwright-report/**"],
+      "passThroughEnv": ["PLAYWRIGHT_*"]
+    },
     "test": {
-      "inputs": ["$TURBO_DEFAULT$"],
-      "dependsOn": ["transit", "lct#build"],
+      // "outputLogs": "new-only",
+      "dependsOn": ["transit"],
+      // "inputs": ["$TURBO_DEFAULTS", "**/*.{ts,tsx}"],
       "outputs": ["coverage/**", "playwright-report/**"],
       "passThroughEnv": ["PLAYWRIGHT_*"],
+      "cache": true,
       "persistent": true
     },
     "transit": {
@@ -41,8 +52,7 @@
       "dependsOn": ["^storybook"]
     },
     "start": {
-      "dependsOn": ["transit", "ui#build", "lct#build"],
-      "persistent": true
+      "dependsOn": ["^start"]
     }
   }
 }
