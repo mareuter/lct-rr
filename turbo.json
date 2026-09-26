@@ -8,15 +8,16 @@
       "outputs": ["dist/**"]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["transit"]
     },
     "lint:fix": {
-      "dependsOn": ["^lint:fix"]
+      "dependsOn": ["transit"]
     },
     "typecheck": {
       "dependsOn": ["^typecheck"]
     },
     "dev": {
+      "with": ["@repo/ui#dev"],
       "cache": false,
       "persistent": true
     },
@@ -43,16 +44,16 @@
       "dependsOn": ["^transit"]
     },
     "format:check": {
-      "dependsOn": ["^format:check"]
+      "dependsOn": ["transit"]
     },
     "format": {
-      "dependsOn": ["^format"]
+      "dependsOn": ["transit"]
     },
     "storybook": {
       "dependsOn": ["^storybook"]
     },
     "start": {
-      "dependsOn": ["^start"]
+      "dependsOn": ["^start", "lct#build"]
     }
   }
 }
