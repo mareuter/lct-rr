@@ -13,7 +13,7 @@
     "start": "turbo run start",
     "test": "turbo run test",
     "test:unit": "turbo run test:unit",
-    "test:e2e": "turbo run test:e2e -vv",
+    "test:e2e": "turbo run test:e2e -vvvv",
     "view-report": "turbo run view-report",
     "prepare": "husky",
     "storybook": "turbo run storybook"
