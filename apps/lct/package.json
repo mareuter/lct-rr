@@ -9,8 +9,8 @@
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "pnpm exec playwright test",
-    "test:ui": "pnpm exec playwright test --ui",
+    "test:e2e": "pnpm exec playwright test",
+    "test": "pnpm exec playwright test --ui",
     "playwright:report": "pnpm exec playwright show-report",
     "start": "react-router-serve ./dist/server/index.js",
     "typecheck": "react-router typegen && tsc"
