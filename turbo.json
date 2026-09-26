@@ -53,7 +53,8 @@
       "dependsOn": ["^storybook"]
     },
     "start": {
-      "dependsOn": ["^start", "lct#build"]
+      "dependsOn": ["^start", "lct#build"],
+      "persistent": true
     }
   }
 }
