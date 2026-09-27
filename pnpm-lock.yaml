@@ -242,6 +242,9 @@ catalogs:
     eslint-config-prettier:
       specifier: ^10.1.8
       version: 10.1.8
+    eslint-config-turbo:
+      specifier: ^2.11.4
+      version: 2.11.4
     eslint-plugin-only-warn:
       specifier: ^1.2.1
       version: 1.2.1
@@ -407,6 +410,9 @@ importers:
       eslint-config-prettier:
         specifier: 'catalog:'
         version: 10.1.8(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))
+      eslint-config-turbo:
+        specifier: 'catalog:'
+        version: 2.11.4(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))(turbo@2.11.3)
       eslint-plugin-only-warn:
         specifier: 'catalog:'
         version: 1.2.1
@@ -534,6 +540,9 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 10.8.1(jiti@2.7.0)(supports-color@8.1.1)
+      eslint-config-turbo:
+        specifier: 'catalog:'
+        version: 2.11.4(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))(turbo@2.11.3)
       eslint-plugin-only-warn:
         specifier: 'catalog:'
         version: 1.2.1
@@ -2295,6 +2304,10 @@ packages:
   dom-accessibility-api@0.6.3:
     resolution: {integrity: sha512-7ZgogeTnjuHbo+ct10G9Ffp0mif17idi0IyWNVA/wcwcm7NPOD/WEHVP3n7n3MhXqxoIYm8d6MuZohYWIZ4T3w==}
 
+  dotenv@16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
@@ -2378,6 +2391,12 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
+  eslint-config-turbo@2.11.4:
+    resolution: {integrity: sha512-LnpLrdosAtipbO8v4PS8JFAGT8wQCiJwGonS6jeMJkc9qRh5cPN4tbx3EV27UX6yFVmQpY2M+bCU+S3oe1e3/w==}
+    peerDependencies:
+      eslint: '>6.6.0'
+      turbo: '>2.0.0'
+
   eslint-plugin-only-warn@1.2.1:
     resolution: {integrity: sha512-j37hwfaQDEOfkZ1Dpvu/HnWLavlzQxQxfbrU/9Jb4R9qzrE1eTYuRJyrxq7LzLRI8miG5FOV6veoUVhx7AI84w==}
 
@@ -2416,6 +2435,12 @@ packages:
     resolution: {integrity: sha512-NeOu3axmhNZfRuHRciFH0a/OVgvtAJLRHAwiJjcGkPAcElNmwEPp+pqoiwxytx7kHInz7mVVoBfPwVc8kPmOLw==}
     peerDependencies:
       eslint: '>=8'
+
+  eslint-plugin-turbo@2.11.4:
+    resolution: {integrity: sha512-1Aq8JjnnzatTpQbK0a4iI1teaJuwH+dBGSp8ok3aHT8HbCn0EGUbQfIVPcUHRm1RXPINEUuyQaj2HvgG5oXcXA==}
+    peerDependencies:
+      eslint: '>6.6.0'
+      turbo: '>2.0.0'
 
   eslint-scope@9.1.2:
     resolution: {integrity: sha512-xS90H51cKw0jltxmvmHy2Iai1LIqrfbw57b79w/J7MfvDfkIkFZ+kj6zC3BjtUwh150HsSSdxXZcsuv72miDFQ==}
@@ -5623,6 +5648,8 @@ snapshots:
 
   dom-accessibility-api@0.6.3: {}
 
+  dotenv@16.0.3: {}
+
   dunder-proto@1.0.1:
     dependencies:
       call-bind-apply-helpers: 1.0.2
@@ -5794,6 +5821,12 @@ snapshots:
     dependencies:
       eslint: 10.8.1(jiti@2.7.0)(supports-color@8.1.1)
 
+  eslint-config-turbo@2.11.4(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))(turbo@2.11.3):
+    dependencies:
+      eslint: 10.8.1(jiti@2.7.0)(supports-color@8.1.1)
+      eslint-plugin-turbo: 2.11.4(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))(turbo@2.11.3)
+      turbo: 2.11.3
+
   eslint-plugin-only-warn@1.2.1: {}
 
   eslint-plugin-prettier@5.5.6(eslint-config-prettier@10.1.8(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1)))(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))(prettier@3.9.6):
@@ -5850,6 +5883,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  eslint-plugin-turbo@2.11.4(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))(turbo@2.11.3):
+    dependencies:
+      dotenv: 16.0.3
+      eslint: 10.8.1(jiti@2.7.0)(supports-color@8.1.1)
+      turbo: 2.11.3
 
   eslint-scope@9.1.2:
     dependencies:

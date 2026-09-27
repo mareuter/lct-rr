@@ -4,7 +4,8 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**"],
+      "env": ["DEV"]
     },
     "lint": {
       "dependsOn": ["transit"]
@@ -28,13 +29,15 @@
     "test:e2e": {
       "dependsOn": ["^test:e2e"],
       "outputs": ["playwright-report/**"],
-      "passThroughEnv": ["PLAYWRIGHT_*"]
+      "passThroughEnv": ["PLAYWRIGHT_*"],
+      "env": ["CI"]
     },
     "test": {
       "dependsOn": ["transit"],
       // "inputs": ["$TURBO_DEFAULTS", "**/*.{ts,tsx}"],
       "outputs": ["coverage/**", "playwright-report/**"],
       "passThroughEnv": ["PLAYWRIGHT_*"],
+      "env": ["CI"],
       "cache": true,
       "persistent": true
     },

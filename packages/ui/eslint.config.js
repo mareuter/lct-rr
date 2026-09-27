@@ -3,13 +3,14 @@ import storybook from 'eslint-plugin-storybook'
 
 import js from '@eslint/js'
 import globals from 'globals'
+import turboConfig from 'eslint-config-turbo/flat'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist', 'storybook-static']),
+  globalIgnores(['coverage', 'dist', 'node_modules', 'storybook-static']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -17,6 +18,7 @@ export default defineConfig([
       tseslint.configs.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
+      ...turboConfig,
     ],
     languageOptions: {
       globals: globals.browser,
