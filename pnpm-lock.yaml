@@ -251,9 +251,6 @@ catalogs:
     eslint-plugin-prettier:
       specifier: ^5.5.6
       version: 5.5.6
-    eslint-plugin-react:
-      specifier: ^7.37.5
-      version: 7.37.5
     eslint-plugin-react-hooks:
       specifier: ^7.1.1
       version: 7.1.1
@@ -419,9 +416,6 @@ importers:
       eslint-plugin-prettier:
         specifier: 'catalog:'
         version: 5.5.6(eslint-config-prettier@10.1.8(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1)))(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))(prettier@3.9.6)
-      eslint-plugin-react:
-        specifier: 'catalog:'
-        version: 7.37.5(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))
       eslint-plugin-react-hooks:
         specifier: 'catalog:'
         version: 7.1.1(eslint@10.8.1(jiti@2.7.0)(supports-color@8.1.1))(supports-color@8.1.1)
