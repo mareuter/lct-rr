@@ -4,7 +4,6 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      // "outputLogs": "new-only",
       "outputs": ["dist/**"]
     },
     "lint": {
@@ -32,7 +31,6 @@
       "passThroughEnv": ["PLAYWRIGHT_*"]
     },
     "test": {
-      // "outputLogs": "new-only",
       "dependsOn": ["transit"],
       // "inputs": ["$TURBO_DEFAULTS", "**/*.{ts,tsx}"],
       "outputs": ["coverage/**", "playwright-report/**"],
