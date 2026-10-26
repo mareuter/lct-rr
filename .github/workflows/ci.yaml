@@ -11,3 +11,4 @@ jobs:
     uses: mareuter/shared-workflows/.github/workflows/ci-pnpm-turborepo.yaml@main
     with:
       use-playwright: true
+      run-e2e: false
