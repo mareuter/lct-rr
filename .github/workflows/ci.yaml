@@ -8,7 +8,7 @@ on:
 
 jobs:
   ci:
-    uses: mareuter/shared-workflows/.github/workflows/ci-pnpm-turborepo.yaml@main
+    uses: mareuter/shared-workflows/.github/workflows/ci-pnpm-turborepo.yaml@95e8cf1994b30dd18f7af123d5d59a3b44dd4e84 # main
     with:
       use-playwright: true
       run-e2e: false
