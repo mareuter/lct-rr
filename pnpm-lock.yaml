@@ -354,7 +354,7 @@ importers:
         specifier: 'catalog:'
         version: 0.1.2(typescript@6.0.3)
       '@playwright/test':
-        specifier: ^1.62.1
+        specifier: 1.63.0
         version: 1.63.0
       '@react-router/dev':
         specifier: 'catalog:'
