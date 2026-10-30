@@ -30,7 +30,7 @@
     "@mareuter/eslint-config": "catalog:",
     "@mareuter/prettier-config": "catalog:",
     "@mareuter/typescript-config": "catalog:",
-    "@playwright/test": "^1.62.1",
+    "@playwright/test": "1.63.0",
     "@react-router/dev": "catalog:",
     "@repo/data": "workspace:*",
     "@tailwindcss/vite": "catalog:",
